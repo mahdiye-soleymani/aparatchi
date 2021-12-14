@@ -6,7 +6,7 @@
 
         <!----start logo--->
         <div id="logo">
-            <a href="#"><img src="<?php echo AddressMyWebsite;?>/public/user/images/logo.PNG"></a>
+            <a href="<?php echo AddressMyWebsite;?>"><img src="<?php echo AddressMyWebsite;?>/public/user/images/logo.PNG"></a>
         </div>
         <!----End logo--->
 
@@ -17,6 +17,7 @@
                 <a href="login.html"> وارد شوید</a>
                 <span class="bg_span_register style_span_header_top"></span>
                 <a href="<?php echo  AddressMyWebsite.'register'?>">ثبت نام کنید</a>
+
             </div>
             <div id="header_row_bottom">
                 <div id="search_box">
