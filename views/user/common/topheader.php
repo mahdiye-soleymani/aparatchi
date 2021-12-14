@@ -14,20 +14,13 @@
         <div id="header_row_top_right" class="BYekan-sm">
             <div id="header_row_top">
                 <span class="bg_span_login style_span_header_top"></span>
-                <a href="login.html">فروشگاه اینترنتی دیجی کالا وارد شوید</a>
+                <a href="login.html"> وارد شوید</a>
                 <span class="bg_span_register style_span_header_top"></span>
                 <a href="register.html">ثبت نام کنید</a>
             </div>
             <div id="header_row_bottom">
-                <div id="basket_bottom">
-                    <div id="basket_icon"></div>
-                    <div id="basket_left">
-                        سبد خرید
-                        <span>0</span>
-                    </div>
-                </div>
                 <div id="search_box">
-                    <input class="BYekan-sm" type="text" name="search_box" placeholder="محصول مورد نظرتان را جستجو کنید....">
+                    <input class="BYekan-sm" type="text" name="search_box" placeholder="فیلم مورد نظرتان را جستجو کنید....">
                     <span></span>
                 </div>
             </div>
