@@ -6,7 +6,7 @@
 
         <!----start logo--->
         <div id="logo">
-            <a href="http://www.daneshjooyar.com"><img src="<?php echo AddressMyWebsite;?>/public/user/images/logo.png"></a>
+            <a href="#"><img src="<?php echo AddressMyWebsite;?>/public/user/images/logo.PNG"></a>
         </div>
         <!----End logo--->
 
