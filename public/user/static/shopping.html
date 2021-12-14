@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shopping</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/flipclock.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/themify-icons.css">
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<!------------- the modal------------------>
+    	<div id="mymodal" class="modal">
+    	<!----- content-modal ------------->
+    		<div class="modal_main">
+    			<!-- <h3>درج آدرس جدید</h3> -->
+    			<span class="close">
+    				<i class="ti-close"></i>
+    			</span>
+    			<div class="line_modal"></div>
+    			<div class="modal_content">
+    				<form>
+    					<label>نام و نام خانوادگی تحویل گیرنده</label>
+    					<div class="row">
+    						<input type="text" name="name">
+    					</div>
+    					<label>شماره تلفن همراه در دسترس</label>
+    					<div class="row">
+    						<input type="text" name="phone">
+    					</div>
+    					<label>شماره تلفن ثابت تحویل گیرنده</label>
+    					<div class="row">
+    						<input type="text" name="constphone">
+    					</div>
+    					<label>استان</label>
+    					<div class="row">
+    						<select name="city">
+    							<option>تهران</option>
+    							<option>تهران</option>
+    							<option>تهران</option>
+    						</select>
+    					</div>
+    					<label>شهر</label>
+    					<div class="row">	
+    						<select name="childcity">
+    							<option>تهران</option>
+    							<option>تهران</option>
+    							<option>تهران</option>
+    						</select>
+    					</div>
+    						<label>کد پستی</label>
+    					<div class="row">
+    						<input type="text" name="zipcode">
+    					</div>
+    					<label>آدرس</label>
+    					<div class="row">
+    						<input type="text" name="address">
+    					</div>
+    					<label>توضیحات اضافی</label>
+    					<div class="row">
+    						<textarea>
+    							
+    						</textarea>
+    					</div>
+    					<div class="row">
+    						<a href="#"><span class="btn_basket">ثبت آدرس جدید</span></a>
+    					</div>
+    				</form>
+    			</div>
+    		</div>
+    	</div>
+	<!----start Main_header--->
+	<header id="main_header">
+
+		<!----start header--->
+		<div id="header">
+
+			<!----start logo--->
+			<div id="logo">
+				<a href="http://www.daneshjooyar.com"><img src="images/logo.png"></a>
+			</div>
+			<!----End logo--->
+
+			<!----start header_row_top_right--->
+			<div id="header_row_top_right" class="BYekan-sm">
+				<div id="header_row_top">
+					<span class="bg_span_login style_span_header_top"></span>
+					<a href="login.html">فروشگاه اینترنتی دیجی کالا وارد شوید</a>
+					<span class="bg_span_register style_span_header_top"></span>
+					<a href="register.html">ثبت نام کنید</a>
+				</div>
+				<div id="header_row_bottom">
+					<div id="basket_bottom">
+						<div id="basket_icon"></div>
+						<div id="basket_left">
+							سبد خرید
+							<span>0</span>
+						</div>
+					</div>
+					<div id="search_box">
+						<input class="BYekan-sm" type="text" name="search_box" placeholder="محصول مورد نظرتان را جستجو کنید....">
+						<span></span>
+					</div>					
+				</div>
+			</div><!----End header_row_top_right--->
+			
+		</div><!----End Main_header--->
+
+	</header><!----End Main_header--->
+
+	<!----start top_menu--->
+	<nav id="top_nav">
+		<div id="top_menu">
+			<ul  class="BYekan-sm">
+				<li data-settime="1">
+					<a href="#">
+						کالای دیجیتال
+						<span class="arrow_down_icon"></span>
+					</a>
+					<ul>
+						<li>
+							<a href="#">موبایل</a>
+							<div class="acolor">
+								<div class="top_menu_col1">
+									<ul>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+									</ul>
+								</div>
+								<div class="top_menu_col2">
+																		<ul>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+									</ul>
+								</div>
+								<div class="top_menu_col3">
+																		<ul>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+									</ul>
+								</div>
+								<div class="top_menu_col4">
+																		<ul>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+									</ul>
+								</div>
+								<img src="images/mobile.png">
+							</div>
+						</li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+					</ul>
+				</li>
+				<li data-settime="2">
+					<a href="#">
+					لوازم خانگی
+					<span class="arrow_down_icon"></span>
+				</a>
+				<ul>
+						<li><a href="#">لوازم خانگی</a>
+							<div class="acolor">
+								<div class="top_menu_col1">
+									<ul>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+									</ul>
+								</div>
+								<div class="top_menu_col2">
+																		<ul>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+									</ul>
+								</div>
+								<div class="top_menu_col3">
+																		<ul>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+									</ul>
+								</div>
+								<div class="top_menu_col4">
+																		<ul>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+									</ul>
+								</div>
+								<img src="images/mobile.png">
+							</div>
+						</li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+						<li><a href="#">موبایل</a></li>
+						<li><a href="#">لپ تاپ</a></li>
+						<li><a href="#">تبلت</a></li>
+						<li><a href="#">پخش صوت</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+					زیبایی و سلامت
+					<span class="arrow_down_icon"></span>
+				</a>
+			   </li>
+				<li>
+					<a href="#">
+					فرهنگ و هنر
+					<span class="arrow_down_icon"></span>
+				</a>
+			   </li>
+				<li>
+					<a href="#">
+					ورزش و سرگرمی
+					<span class="arrow_down_icon"></span>
+				</a>
+			   </li>
+				<li>
+					<a href="#">
+					مادر و کودک
+					<span class="arrow_down_icon"></span>
+				</a>
+			  </li>
+				<li>
+					<a href="#">
+					ابزار الکترونیک
+					<span class="arrow_down_icon"></span>
+				</a>
+			 </li>
+				<li>
+					<a href="#">
+					خودرو و لوازم
+					<span class="arrow_down_icon"></span>
+				</a>
+			</li>
+			</ul>
+		</div>
+	</nav>
+    <!----End top_menu--->
+    <!-----------start-main-------------->
+    <div id="main">
+    	<div class="content">
+    		<div class="user_order_status">
+    			<div class="order_status">
+    				<div class="line_dash">
+    					<span></span>
+    					<span></span>
+    					<span></span>
+    					<span></span>
+    					<span></span>
+    				</div>
+    				<ul>
+    				    <li class="active">
+    						<span class="circle"></span>
+    						<span class="line_span_acount"></span>
+    						<span class="title_span_acount">ورود به سایت</span>
+    					</li>
+    					<li>
+    						<span class="circle"></span>
+    						<span class="line_span_acount"></span>
+    						<span class="title_span_acount">اطلاعات سفارش</span>
+    					</li>
+    					<li>
+    						<span class="circle"></span>
+    						<span class="line_span_acount"></span>
+    						<span class="title_span_acount">بررسی سفارش</span>
+    					</li>
+    					<li>
+    						<span class="circle"></span>
+    						<span class="title_span_acount">اطلاعات پرداخت</span>
+    					</li>
+    				</ul>
+    				<div class="line_dash line_dash_two">
+    					<span></span>
+    					<span></span>
+    					<span></span>
+    					<span></span>
+    					<span></span>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="shopping_order_info">
+    			<div class="head_basket_cart">
+    				<h3>سبد خرید شما</h3>
+    				<a href="#" class="btn_modal"><span class="btn_basket">اضافه کردن آدرس جدید</span></a>
+    			</div>
+    			<div class="line"></div>
+    			<h3>انتخاب آدرس</h3>
+    			<div class="shopping_content">
+    				<table cellspacing="0" class="active">
+    					<tr>
+    						<td rowspan="3" class="tdone_content">
+    							<span class="circle_content_table"></span>
+    						</td>
+    						<td colspan="3" class="tdtwo_content">وب سایت آموزشی دانشجویار</td>
+    						<td rowspan="3" class="tdone_content">
+    							<table cellspacing="0">
+    								<tr>
+    									<td class="edit">
+    										<a href="#"><img src="images/edit_flat.png"></a>
+    									</td>
+    								</tr>
+    								<tr>
+    									<td class="delete">
+    										<a href="#"><img src="images/trash_flat.png"></a>
+    									</td>
+    								</tr>
+    							</table>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td style="width: 200px;">
+    							<p>استان :</p>
+    						</td>
+    						<td rowspan="2">
+    							<p>
+    							خراسان جنوبی - شهر تست -منطقه --- پلاک --- طبقه ---- 
+    							</p>
+    						     </br>
+    						     <p>
+    						     	کد پستی : 44444444488
+
+    						     </p>
+    						</td>
+    						<td style="width: 200px;">
+    							<p>
+    								شماره تماس همراه : 878797979797
+    							</p>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td>
+    							<p>شهر:</p>
+    						</td>
+    						<td>
+    							<p>
+    								 شماره تماس ثابت: 878797979797
+    							</p>
+    						</td>
+    					</tr>
+    				</table>
+    				<table cellspacing="0" class="active">
+    					<tr>
+    						<td rowspan="3" class="tdone_content">
+    							<span class="circle_content_table"></span>
+    						</td>
+    						<td colspan="3" class="tdtwo_content">وب سایت آموزشی دانشجویار</td>
+    						<td rowspan="3" class="tdone_content">
+    							<table cellspacing="0">
+    								<tr>
+    									<td class="edit">
+    										<a href="#"><img src="images/edit_flat.png"></a>
+    									</td>
+    								</tr>
+    								<tr>
+    									<td class="delete">
+    										<a href="#"><img src="images/trash_flat.png"></a>
+    									</td>
+    								</tr>
+    							</table>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td style="width: 200px;">
+    							<p>استان :</p>
+    						</td>
+    						<td rowspan="2">
+    							<p>
+    							خراسان جنوبی - شهر تست -منطقه --- پلاک --- طبقه ---- 
+    							</p>
+    						     </br>
+    						     <p>
+    						     	کد پستی : 44444444488
+
+    						     </p>
+    						</td>
+    						<td style="width: 200px;">
+    							<p>
+    								شماره تماس همراه : 878797979797
+    							</p>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td>
+    							<p>شهر:</p>
+    						</td>
+    						<td>
+    							<p>
+    								 شماره تماس ثابت: 878797979797
+    							</p>
+    						</td>
+    					</tr>
+    				</table>
+    				<table cellspacing="0" class="active">
+    					<tr>
+    						<td rowspan="3" class="tdone_content">
+    							<span class="circle_content_table"></span>
+    						</td>
+    						<td colspan="3" class="tdtwo_content">وب سایت آموزشی دانشجویار</td>
+    						<td rowspan="3" class="tdone_content">
+    							<table cellspacing="0">
+    								<tr>
+    									<td class="edit">
+    										<a href="#"><img src="images/edit_flat.png"></a>
+    									</td>
+    								</tr>
+    								<tr>
+    									<td class="delete">
+    										<a href="#"><img src="images/trash_flat.png"></a>
+    									</td>
+    								</tr>
+    							</table>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td style="width: 200px;">
+    							<p>استان :</p>
+    						</td>
+    						<td rowspan="2">
+    							<p>
+    							خراسان جنوبی - شهر تست -منطقه --- پلاک --- طبقه ---- 
+    							</p>
+    						     </br>
+    						     <p>
+    						     	کد پستی : 44444444488
+
+    						     </p>
+    						</td>
+    						<td style="width: 200px;">
+    							<p>
+    								شماره تماس همراه : 878797979797
+    							</p>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td>
+    							<p>شهر:</p>
+    						</td>
+    						<td>
+    							<p>
+    								 شماره تماس ثابت: 878797979797
+    							</p>
+    						</td>
+    					</tr>
+    				</table>
+    				<table cellspacing="0" class="active">
+    					<tr>
+    						<td rowspan="3" class="tdone_content">
+    							<span class="circle_content_table"></span>
+    						</td>
+    						<td colspan="3" class="tdtwo_content">وب سایت آموزشی دانشجویار</td>
+    						<td rowspan="3" class="tdone_content">
+    							<table cellspacing="0">
+    								<tr>
+    									<td class="edit">
+    										<a href="#"><img src="images/edit_flat.png"></a>
+    									</td>
+    								</tr>
+    								<tr>
+    									<td class="delete">
+    										<a href="#"><img src="images/trash_flat.png"></a>
+    									</td>
+    								</tr>
+    							</table>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td style="width: 200px;">
+    							<p>استان :</p>
+    						</td>
+    						<td rowspan="2">
+    							<p>
+    							خراسان جنوبی - شهر تست -منطقه --- پلاک --- طبقه ---- 
+    							</p>
+    						     </br>
+    						     <p>
+    						     	کد پستی : 44444444488
+
+    						     </p>
+    						</td>
+    						<td style="width: 200px;">
+    							<p>
+    								شماره تماس همراه : 878797979797
+    							</p>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td>
+    							<p>شهر:</p>
+    						</td>
+    						<td>
+    							<p>
+    								 شماره تماس ثابت: 878797979797
+    							</p>
+    						</td>
+    					</tr>
+    				</table>
+    				<table cellspacing="0" class="active">
+    					<tr>
+    						<td rowspan="3" class="tdone_content">
+    							<span class="circle_content_table"></span>
+    						</td>
+    						<td colspan="3" class="tdtwo_content">وب سایت آموزشی دانشجویار</td>
+    						<td rowspan="3" class="tdone_content">
+    							<table cellspacing="0">
+    								<tr>
+    									<td class="edit">
+    										<a href="#"><img src="images/edit_flat.png"></a>
+    									</td>
+    								</tr>
+    								<tr>
+    									<td class="delete">
+    										<a href="#"><img src="images/trash_flat.png"></a>
+    									</td>
+    								</tr>
+    							</table>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td style="width: 200px;">
+    							<p>استان :</p>
+    						</td>
+    						<td rowspan="2">
+    							<p>
+    							خراسان جنوبی - شهر تست -منطقه --- پلاک --- طبقه ---- 
+    							</p>
+    						     </br>
+    						     <p>
+    						     	کد پستی : 44444444488
+
+    						     </p>
+    						</td>
+    						<td style="width: 200px;">
+    							<p>
+    								شماره تماس همراه : 878797979797
+    							</p>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td>
+    							<p>شهر:</p>
+    						</td>
+    						<td>
+    							<p>
+    								 شماره تماس ثابت: 878797979797
+    							</p>
+    						</td>
+    					</tr>
+    				</table>
+    			</div>
+    			<div class="shopping_post_product">
+    				<table cellspacing="0" class="active">
+    					<tr>
+    						<td rowspan="3" class="tdone_content">
+    							<span class="circle_content_table"></span>
+    						</td>
+    						<td>
+    							<img src="images/post_product.png">
+    						</td>
+    						<td>
+    							<p class="post_bold">تحویل اکسپرس (هزینه ارسال رایگان) ویژه سفارش های بیش از صد هزارتومان  سفارش های کمتر از صد هزارتومان مبلغ 4500 تومان</p>
+    						</td>
+    						<td>
+    							<p>هزینه ارسال</p>
+    							<span>رایگان</span>
+    						</td>
+    					</tr>
+    				</table>
+    				    				<table cellspacing="0" class="active">
+    					<tr>
+    						<td rowspan="3" class="tdone_content">
+    							<span class="circle_content_table"></span>
+    						</td>
+    						<td>
+    							<img src="images/post_product.png">
+    						</td>
+    						<td>
+    							<p class="post_bold">تحویل اکسپرس (هزینه ارسال رایگان) ویژه سفارش های بیش از صد هزارتومان  سفارش های کمتر از صد هزارتومان مبلغ 4500 تومان</p>
+    						</td>
+    						<td>
+    							<p>هزینه ارسال</p>
+    							<span>رایگان</span>
+    						</td>
+    					</tr>
+    				</table>
+    			</div>
+    			<div class="final_shopping">
+    				<a href="step_order3.html">
+    					<span class="btn_basket">ثبت اطلاعات و ادامه خرید</span>
+    				</a>
+    			</div>
+    		</div>
+    	</div>
+
+    </div>
+    <footer>
+    	<div id="footer">
+    			<div class="footer_top">
+    				<div class="main_footer">
+    					<div class="ft_right"><p class="BYekan-sm">در طول هفته 24 ساعته پاسخگوی شما هستیم</p></div>
+    					<div class="ft_left">
+    						<ul class="BYekan-sm">
+    							<li>
+    								<a>04458791456</a>
+    								<span style="background: url(images/register.png) no-repeat;"></span>
+    							</li>
+    							<li>
+    								<a>سوالات متداول</a>
+    								<span style="background: url(images/register.png) no-repeat;"></span>
+    							</li>
+    							<li>
+    								<a>info@daneshjooyar.com</a>
+    								<span style="background: url(images/register.png) no-repeat;"></span>
+    							</li>
+    						</ul>
+    					</div>
+    				</div>
+    			</div>
+    		    <div class="footer_bottom">
+    		    	<div class="main_footer">
+    		    	<div class="fb_right">
+    		    		<div class="fbnav_right">
+    		    			<h3 class="hfooter">دسترسی سریع</h3>
+    		    			<ul class="BYekan-sm">
+    							<li>
+    								<a href="#">لینک آزمایشی</a>
+    							</li>
+    							<li>
+    								<a href="#">لینک آزمایشی</a>
+    							</li>
+    							<li>
+    								<a href="#">لینک آزمایشی</a>
+    							</li>
+    							<li>
+    								<a href="#">لbbbbbbbbbbbینک آزمایشی</a>
+    							</li>
+    						</ul>
+    		    		</div>
+    		    		<div class="fbnav_center">
+    		    			<h3 class="hfooter">دسترسی سریع</h3>
+    		    			<ul class="BYekan-sm">
+    							<li>
+    								<a href="#">لینک آزمایشی</a>
+    							</li>
+    							<li>
+    								<a href="#">لینک آزمایشی</a>
+    							</li>
+    							<li>
+    								<a href="#">لینک آزمایشی</a>
+    							</li>
+    							<li>
+    								<a href="#">لینک آزمایشی</a>
+    							</li>
+
+    						</ul>
+    		    		</div>
+    		    		<div class="fbnav_left">
+    		    			<h3 class="hfooter">دسترسی سریع</h3>
+    		    			<ul class="BYekan-sm">
+    							<li>
+    								<a href="#">لینک آزمایشی</a>
+    							</li>
+    							<li>
+    								<a href="#">لینک آزمایشی</a>
+    							</li>
+    							<li>
+    								<a href="#">لینک آزمایشی</a>
+    							</li>
+    							<li>
+    								<a href="#">لینک آزمایشی</a>
+    							</li>
+
+    						</ul>
+    		    		</div>
+    		    	</div>
+    		    	<div class="fb_left">
+    		    		<h3 class="hfooter">بصورت رایگان عضو خبرنامه ی سایت شوید</h3>
+    		    		<div class="email_sh">
+    		    			<input class="BYekan-sm input_btn" type="text" name="email_share" placeholder="آدرس ایمیل خود را وارد کنید">
+    		    			<input class="BYekan-sm btn" type="submit" name="btn_send" value="تائید ایمیل">
+    		    		</div>
+    		    		<div class="social_media">
+    		    			<a href="#"><i class="ti-facebook"></i></a>
+    		    			<a href="#"><i class="ti-linkedin"></i></a>
+    		    			<a href="#"><i class="ti-twitter-alt"></i></a>
+    		    			<a href="#"><i class="ti-instagram"></i></a>
+    		    			<a href="#"><i class=" ti-google "></i></a>
+    		    		</div>
+    		    		<div class="app">
+    		    			<a href="#"><img src="images/android_app.png"></a>
+    		    			<a href="#"><img src="images/ios_app.png"></a>
+    		    		</div>
+    		    	</div>
+    		    	</div>
+    		    </div>
+    	</div>
+    </footer>
+
+    <!------------End-main--------------->
+<script src="js/jquery.js"></script>
+<script src="js/flipclock.js"></script>
+</body>
+</html>

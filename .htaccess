@@ -1,0 +1,6 @@
+RewriteEngine On
+#چک میکند فایل وجود دارد
+RewriteCond %{REQUEST_FILENAME} !-f
+#چک میکند دایرکتوری وجود دارد
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?zicco=$1 [QSA]
