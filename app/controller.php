@@ -5,7 +5,7 @@ class controller
 {
     public function loadModel($model)
     {
-        // این کد فراخوانی مادل
+        // این کد فراخوانی مدل
         if (file_exists(__DIR__ . DIRECTORY_SEPARATOR . '../models/' . $model . '.php')) {
             require_once __DIR__ . DIRECTORY_SEPARATOR . '../models/' . $model . '.php';
             $object = new $model;

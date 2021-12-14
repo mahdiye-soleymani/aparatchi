@@ -28,7 +28,7 @@ class proccess
 
         } else {
 
-            $this->controller = 'aparatchi';
+            $this->controller = 'login';
             $this->method = 'indexAction';
             $this->explode = array();
             $this->location = 'controllers/' . $this->controller . '.php';  // مسیر کنترلر را معرفی میکنیم
