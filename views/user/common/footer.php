@@ -92,8 +92,8 @@
                         <a href="#"><i class=" ti-google "></i></a>
                     </div>
                     <div class="app">
-                        <a href="#"><img src="images/android_app.png"></a>
-                        <a href="#"><img src="images/ios_app.png"></a>
+                        <a href="#"><img src="<?php echo AddressMyWebsite;?>/public/user/images/android_app.png"></a>
+                        <a href="#"><img src="<?php echo AddressMyWebsite;?>/public/user/images/ios_app.png"></a>
                     </div>
                 </div>
             </div>

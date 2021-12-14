@@ -12,12 +12,9 @@ class proccess
     public function __construct()
     {
         if (isset($_GET['aparatchi'])) {
-            //Run code
-            $url = rtrim($_GET['aparatchi'], '/');   //admin/editpost/4
-            $this->explode = $this->explodeUrl($url); // array (0=>admin,1=>editpost,2=>4)
 
-
-
+            $url = rtrim($_GET['aparatchi'], '/');
+            $this->explode = $this->explodeUrl($url);
             $this->setController(); // فراخوانی متد ست کنترلر
             $this->setMethod(); //فراخوانی متد ست متد
             $this->sortArray();// فراخوانی متد مرتب سازی ارایه یعنی مرتب سازی شروع خانه های ارایه
@@ -28,13 +25,13 @@ class proccess
 
         } else {
 
-            $this->controller = 'login';
+            $this->controller = 'aparatchi';
             $this->method = 'indexAction';
             $this->explode = array();
             $this->location = 'controllers/' . $this->controller . '.php';  // مسیر کنترلر را معرفی میکنیم
             $this->createObject();  // ایجاد یک نمونه از روی کنترلری که کاربر وارد میکند
-            $this->checkMethod(); // بررسی اینکه ایا متد مورد نظر درون کنتر میباشد یا ن
-            $this->proccessApp(); // در اینجا هم محتوای موجود در متهد درون کنترلر اجرا خواهد شد
+            $this->checkMethod(); // بررسی اینکه ایا متد مورد نظر درون کنتلر میباشد یا ن
+            $this->proccessApp(); // محتوای موجود در متد درون کنترلر اجرا خواهد شد
 
 //            return false;
         }
@@ -43,7 +40,7 @@ class proccess
 
     public function explodeUrl($url)
     {
-        //در این متهد ما یک ورودی میگیریم و ورودی رو بر حسب یک اسلش تکه تکه میکنیم و درواقع خروجی ارایه میباشد
+        //در این متد ما یک ورودی میگیریم و ورودی رو بر حسب یک اسلش تکه تکه میکنیم و درواقع خروجی ارایه میباشد
         return explode('/', $url);
     }
 
@@ -89,7 +86,7 @@ class proccess
 
     public function checkMethod()
     {
-        // در این متهد بررسی میکنیم ببینیم متهدی که کاربر در مرورگر وارد کرده داخل کنترلر وجود دارد یا ن
+        // بررسی میکنیم ببینیم متدی که کاربر در مرورگر وارد کرده داخل کنترلر وجود دارد یا ن
         if (method_exists($this->obj, $this->method)) {
             return true;
         } else {
@@ -103,7 +100,7 @@ class proccess
     }
 
 
-}// بسته شدن کلاس
+}
 
 
 $object = new proccess(); //یک نمونه از روی کلاس ساخته ایم

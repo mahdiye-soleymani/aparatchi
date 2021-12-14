@@ -7,7 +7,7 @@ class aparatchi extends controller
 {
     public function indexAction()
     {
-        //ویو امان را فراخوانی میکنیم
+        //ویومان را فراخوانی میکنیم
         $this->loadView('user/aparatchi/aparatchi_index', array('title' => '.: APARATCHI | آپاراتچی :.'));
     }
 

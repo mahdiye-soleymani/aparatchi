@@ -5,7 +5,7 @@ class controller
 {
     public function loadModel($model)
     {
-        // این کد فراخوانی مدل
+        //  فراخوانی مدل
         if (file_exists(__DIR__ . DIRECTORY_SEPARATOR . '../models/' . $model . '.php')) {
             require_once __DIR__ . DIRECTORY_SEPARATOR . '../models/' . $model . '.php';
             $object = new $model;
@@ -15,13 +15,9 @@ class controller
 
     public function loadView($view, $aparatchi = array())
     {
-        // این کد فراخوانی ویو شد
+        // فراخوانی ویو
         if (file_exists(__DIR__ . DIRECTORY_SEPARATOR . '../views/' . $view . '.php')) {
-//            require_once __DIR__ . DIRECTORY_SEPARATOR . '../views/common/header.php';
-
             require_once __DIR__ . DIRECTORY_SEPARATOR . '../views/' . $view . '.php';
-//            require_once __DIR__ . DIRECTORY_SEPARATOR . '../views/common/footer.php';
-
         } else {
             return false;
         }
