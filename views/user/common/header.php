@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?php echo $aparatchi['title'];?></title>
+    <title><?php echo  $aparatchi['title'];?></title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="<?php echo AddressMyWebsite;?>/public/user/css/flipclock.css">
     <link rel="stylesheet" type="text/css" href="<?php echo AddressMyWebsite;?>/public/user/css/style.css">

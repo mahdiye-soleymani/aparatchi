@@ -13,8 +13,9 @@ class proccess
     {
         if (isset($_GET['aparatchi'])) {
 
-            $url = rtrim($_GET['aparatchi'], '/');
+            $url = rtrim(security($_GET['aparatchi']), '/');
             $this->explode = $this->explodeUrl($url);
+
             $this->setController(); // فراخوانی متد ست کنترلر
             $this->setMethod(); //فراخوانی متد ست متد
             $this->sortArray();// فراخوانی متد مرتب سازی ارایه یعنی مرتب سازی شروع خانه های ارایه

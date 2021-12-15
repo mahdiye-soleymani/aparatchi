@@ -14,7 +14,7 @@
         <div id="header_row_top_right" class="BYekan-sm">
             <div id="header_row_top">
                 <span class="bg_span_login style_span_header_top"></span>
-                <a href="login.html"> وارد شوید</a>
+                <a href="<?php echo  AddressMyWebsite.'login'?>"> وارد شوید</a>
                 <span class="bg_span_register style_span_header_top"></span>
                 <a href="<?php echo  AddressMyWebsite.'register'?>">ثبت نام کنید</a>
 

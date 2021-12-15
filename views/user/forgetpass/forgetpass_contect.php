@@ -1,6 +1,6 @@
 <div id="register" style="height: 270px;">
     <div class="register_header">
-        <img src="images/register_page.png">
+        <img src="<?php echo AddressMyWebsite;?>/public/user/images/register_page.png">
     </div>
     <div class="form_register">
         <form id="form_register">

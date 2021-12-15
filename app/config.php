@@ -5,7 +5,12 @@
     //تابع امنیتی مان
     function security($input)
     {
-        return trim(htmlentities($input));
+        return htmlentities($input);
+    }
+
+    function trim_url($url)
+    {
+        return trim($url);
     }
 
     //برای هش کردن پسورود ها
@@ -17,4 +22,9 @@
         return crypt($password, $salt);
     }
 
+
+    function random_token()
+    {
+        return md5((uniqid(rand())));
+    }
 ?>

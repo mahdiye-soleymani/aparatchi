@@ -13,7 +13,7 @@ class controller
         }
     }
 
-    public function loadView($view, $aparatchi = array())
+    public function loadView($view,$aparatchi = array())
     {
         // فراخوانی ویو
         if (file_exists(__DIR__ . DIRECTORY_SEPARATOR . '../views/' . $view . '.php')) {

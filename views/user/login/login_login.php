@@ -16,7 +16,7 @@
             <div>
                 <label class="BYekan-sm">مرا بخاطر بسپار</label>
                 <input class="checkbox" type="checkbox" name="remember">
-                <a class="BYekan-sm" href="forgetpass.html">رمز عبور را فراموش کرده ام</a>
+                <a class="BYekan-sm" href="<?php echo  AddressMyWebsite.'forgetpass'?>">رمز عبور را فراموش کرده ام</a>
             </div></br>
             <div class="btn_register">
                 <input class="BYekan-sm" type="submit" name="submit" value="ثبت نام">
