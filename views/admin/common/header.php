@@ -8,7 +8,7 @@
     <title>.: پنل مدیریت آپاراتچی :.</title>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="<?php echo AddressMyWebsite;?>/public/admin/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php  echo  AddressMyWebsite;?>/public/admin/plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo AddressMyWebsite . 'public/admin/' ?>https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo AddressMyWebsite;?>/public/admin/dist/css/adminlte.min.css">

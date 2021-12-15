@@ -3,10 +3,10 @@
  * Created by PhpStorm.
  * User: root
  * Date: 11/10/20
- * Time: 2:20 PM
+ * Time: 4:04 PM
  */
 
-class registerModel extends  database
+class forgetpasswordModel extends database
 {
 
 }

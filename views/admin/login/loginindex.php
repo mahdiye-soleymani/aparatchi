@@ -1,22 +1,29 @@
 <?php require_once __DIR__ . DIRECTORY_SEPARATOR . '../common/header.php'; ?>
     <div class="login-box">
         <div class="login-logo">
-            <a href=""><b>  ورود به پنل مدیریت آپاراتچی</b></a>
+            <a href=""><b>ورود به پنل مدیریت</b></a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">فرم زیر را تکمیل کنید</p>
+
+                <?php
+
+                if ($aparatchi['message_error_loginadmin'] != null) {
+                   echo "<p style='color: red'>".$aparatchi['message_error_loginadmin']."</p>";
+                }
+                ?>
+                <p class="login-box-msg">فرم زیر را تکمیل کنید و ورود بزنید</p>
 
                 <form action="" method="post">
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="ایمیل">
+                        <input type="email" name="emailloginadmin" class="form-control" placeholder="ایمیل">
                         <div class="input-group-append">
                             <span class="fa fa-envelope input-group-text"></span>
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="رمز عبور">
+                        <input type="password" name="passwordloginadmin" class="form-control" placeholder="رمز عبور">
                         <div class="input-group-append">
                             <span class="fa fa-lock input-group-text"></span>
                         </div>
@@ -31,29 +38,30 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">ورود</button>
+                            <button name="btnloginadmin" type="submit" class="btn btn-primary btn-block btn-flat">ورود
+                            </button>
                         </div>
                         <!-- /.col -->
                     </div>
                 </form>
 
-<!--                <div class="social-auth-links text-center mb-3">-->
-<!--                    <p>- OR -</p>-->
-<!--                    <a href="#" class="btn btn-block btn-primary">-->
-<!--                        <i class="fa fa-facebook mr-2"></i> ورود با اکانت فیسوبک-->
-<!--                    </a>-->
-<!--                    <a href="#" class="btn btn-block btn-danger">-->
-<!--                        <i class="fa fa-google-plus mr-2"></i> ورود با اکانت گوگل-->
-<!--                    </a>-->
-<!--                </div>-->
+                <!--                <div class="social-auth-links text-center mb-3">-->
+                <!--                    <p>- OR -</p>-->
+                <!--                    <a href="#" class="btn btn-block btn-primary">-->
+                <!--                        <i class="fa fa-facebook mr-2"></i> ورود با اکانت فیسوبک-->
+                <!--                    </a>-->
+                <!--                    <a href="#" class="btn btn-block btn-danger">-->
+                <!--                        <i class="fa fa-google-plus mr-2"></i> ورود با اکانت گوگل-->
+                <!--                    </a>-->
+                <!--                </div>-->
                 <!-- /.social-auth-links -->
 
-<!--                <p class="mb-1">-->
-<!--                    <a href="#">رمز عبورم را فراموش کرده ام.</a>-->
-<!--                </p>-->
-<!--                <p class="mb-0">-->
-<!--                    <a href="register.html" class="text-center">ثبت نام</a>-->
-<!--                </p>-->
+                <!--                <p class="mb-1">-->
+                <!--                    <a href="#">رمز عبورم را فراموش کرده ام.</a>-->
+                <!--                </p>-->
+                <!--                <p class="mb-0">-->
+                <!--                    <a href="register.html" class="text-center">ثبت نام</a>-->
+                <!--                </p>-->
             </div>
             <!-- /.login-card-body -->
         </div>

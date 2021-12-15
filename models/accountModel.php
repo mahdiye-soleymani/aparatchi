@@ -3,10 +3,10 @@
  * Created by PhpStorm.
  * User: root
  * Date: 11/10/20
- * Time: 2:20 PM
+ * Time: 3:57 PM
  */
 
-class registerModel extends  database
+class accountModel extends database
 {
 
 }

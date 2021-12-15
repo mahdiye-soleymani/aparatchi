@@ -12,7 +12,6 @@ class controller
             return $object;
         }
     }
-
     public function loadView($view,$aparatchi = array())
     {
         // فراخوانی ویو

@@ -1,6 +1,7 @@
 <?php
 
-class loginModel
+
+class loginModel extends database
 {
 
 }
