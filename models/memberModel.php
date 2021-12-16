@@ -102,10 +102,24 @@ class memberModel extends database
     public function logintosite($email,$password){
         $result = $this->connect->prepare('SELECT * FROM `tbl_users` WHERE `email`=? AND `password`=?');
         $result->bindValue(1,$email);
-        $result->bindValue(2,$password);
+        $result->bindValue(2, hashpassword($password));
         $result->execute();
-        //چون ایمیل مان باید یونیک باشذ
+        //چون ایمیل مان باید یونیک باشد
         if ($result->rowCount() == 1) {
+            if (!empty($_POST['rememberloginsite'])) {
+                /*یعنی زمانی که تیک را زده ایم*/
+                setcookie('EmailCookie', $email, time() + 86400);
+                setcookie('PasswordCookie', $password, time() + 86400);
+            } else {
+
+                if(isset($_COOKIE['EmailCookie'])){
+                    setcookie('EmailCookie','');
+                }
+                if(isset($_COOKIE['PasswordCookie'])){
+                    setcookie('PasswordCookie','');
+                }
+                /*یعنی زمانی که تیک را نزده ایم*/
+            }
             // اطلاعات صحیح میباشد
             return true;
         } else {

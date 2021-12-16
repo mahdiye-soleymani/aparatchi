@@ -12,16 +12,16 @@
             <div>
 
                 <label class="BYekan-sm">ایمیل</label>
-                <input class="BYekan-sm" type="email" name="email_loginsite" placeholder="ایمیل خود را وارد کنید">
+                <input class="BYekan-sm" type="email" name="email_loginsite" placeholder="ایمیل خود را وارد کنید" value="<?php if(isset($_COOKIE['EmailCookie'])) echo $_COOKIE['EmailCookie'];?>">
             </div>
             <div>
                 <label class="BYekan-sm">رمز عبور</label>
-                <input class="BYekan-sm" type="password" name="password_loginsite" placeholder="لطفا یک رمز عبور معتبر وارد کنید">
+                <input class="BYekan-sm" type="password" name="password_loginsite" placeholder="لطفا یک رمز عبور معتبر وارد کنید" value="<?php if(isset($_COOKIE['PasswordCookie'])) echo $_COOKIE['PasswordCookie'];?>">
             </div>
 
             <div>
                 <label class="BYekan-sm">مرا بخاطر بسپار</label>
-                <input class="checkbox" type="checkbox" name="remember">
+                <input class="checkbox" type="checkbox" name="rememberloginsite" <?php if(isset($_COOKIE['PasswordCookie'])) echo 'checked';?> >
                 <a class="BYekan-sm" href="<?php echo AddressMyWebsite . 'forgetpassword'; ?>">رمز عبور را فراموش کرده ام</a>
             </div>
             </br>

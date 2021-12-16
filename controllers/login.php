@@ -9,7 +9,7 @@ class login extends controller
         if (isset($_POST['btnloginsite'])) {
             if (!empty($_POST['email_loginsite']) && !empty($_POST['password_loginsite'])) {
                 $emailloginsite = trim_url(security($_POST['email_loginsite']));
-                $passwordloginsite = trim_url(hashpassword($_POST['password_loginsite']));
+                $passwordloginsite = trim_url($_POST['password_loginsite']);
 
                 if ($membermodel->logintosite($emailloginsite, $passwordloginsite)) { // خروجی true هست یعنی مشخصات به درستی وارد شده است
 
