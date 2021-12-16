@@ -1031,7 +1031,7 @@ input{
 /************************************* start register *************/
 #register{
 	width: 600px;
-	height: 400px;
+	height: auto;
 	margin: 0 auto;
 	overflow: hidden;
 	border-radius: 5px;
@@ -1053,7 +1053,7 @@ input{
 .form_register{
 	width: 100%;
 	padding: 10px;
-	height: 290px;
+	height: auto;
 	text-align: center;
 }
 .form_register label{
@@ -1071,7 +1071,8 @@ input{
    height: 20px;
 }
 .btn_register{
-	margin-top: 20px;
+	margin-top: 15px;
+
 }
 .btn_register input{
 	color: #fff;
@@ -1082,6 +1083,7 @@ input{
 	cursor: pointer;
 	transition: .3s ease;
 	background-color: #00c9ff;
+	/*margin-bottom: 15px;*/
 }
 .btn_register input:hover{
 	background-color: #44c3e4;
@@ -1220,7 +1222,6 @@ input{
 	top: 38px;
 	right: 3px;
 	float: right;z-index: 2;
-
 	display: none;
 	padding-top: 5px;
 	border-radius: 4px;
@@ -2766,7 +2767,7 @@ table > tbody > tr > td > .info_order{
 	clear: both;
 	float: left;
 }
-/********************** user start user_order_status ***********/
+/********************** users start user_order_status ***********/
 .user_order_status{
 	width: 80%;
 	height: auto;

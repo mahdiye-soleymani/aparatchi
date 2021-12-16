@@ -7,15 +7,12 @@
                     <ul class="BYekan-sm">
                         <li>
                             <a>04458791456</a>
-                            <span style="background: url(images/register.png) no-repeat;"></span>
                         </li>
                         <li>
                             <a>سوالات متداول</a>
-                            <span style="background: url(images/register.png) no-repeat;"></span>
                         </li>
                         <li>
                             <a>info@daneshjooyar.com</a>
-                            <span style="background: url(images/register.png) no-repeat;"></span>
                         </li>
                     </ul>
                 </div>
@@ -28,55 +25,15 @@
                         <h3 class="hfooter">دسترسی سریع</h3>
                         <ul class="BYekan-sm">
                             <li>
-                                <a href="#">لینک آزمایشی</a>
+                                <a href="#">ویچر</a>
                             </li>
                             <li>
-                                <a href="#">لینک آزمایشی</a>
-                            </li>
-                            <li>
-                                <a href="#">لینک آزمایشی</a>
-                            </li>
-                            <li>
-                                <a href="#">لbbbbbbbbbbbینک آزمایشی</a>
+                                <a href="#">نقد ونوم 2</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="fbnav_center">
-                        <h3 class="hfooter">دسترسی سریع</h3>
-                        <ul class="BYekan-sm">
-                            <li>
-                                <a href="#">لینک آزمایشی</a>
-                            </li>
-                            <li>
-                                <a href="#">لینک آزمایشی</a>
-                            </li>
-                            <li>
-                                <a href="#">لینک آزمایشی</a>
-                            </li>
-                            <li>
-                                <a href="#">لینک آزمایشی</a>
-                            </li>
 
-                        </ul>
-                    </div>
-                    <div class="fbnav_left">
-                        <h3 class="hfooter">دسترسی سریع</h3>
-                        <ul class="BYekan-sm">
-                            <li>
-                                <a href="#">لینک آزمایشی</a>
-                            </li>
-                            <li>
-                                <a href="#">لینک آزمایشی</a>
-                            </li>
-                            <li>
-                                <a href="#">لینک آزمایشی</a>
-                            </li>
-                            <li>
-                                <a href="#">لینک آزمایشی</a>
-                            </li>
 
-                        </ul>
-                    </div>
                 </div>
                 <div class="fb_left">
                     <h3 class="hfooter">بصورت رایگان عضو خبرنامه ی سایت شوید</h3>
@@ -90,10 +47,6 @@
                         <a href="#"><i class="ti-twitter-alt"></i></a>
                         <a href="#"><i class="ti-instagram"></i></a>
                         <a href="#"><i class=" ti-google "></i></a>
-                    </div>
-                    <div class="app">
-                        <a href="#"><img src="<?php echo AddressMyWebsite;?>/public/user/images/android_app.png"></a>
-                        <a href="#"><img src="<?php echo AddressMyWebsite;?>/public/user/images/ios_app.png"></a>
                     </div>
                 </div>
             </div>

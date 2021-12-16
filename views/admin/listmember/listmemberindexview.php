@@ -36,19 +36,28 @@
                                     <tbody>
                                     <tr>
                                         <th>شماره</th>
+                                        <th>نام و نام خانوادگی</th>
                                         <th>یوزر نیم</th>
                                         <th>ایمیل</th>
                                         <th>عملیات</th>
                                     </tr>
-                                    <?php foreach ($aparatchi['membermodel']->listmember() as $value) { ?>
-                                        <tr>
-                                            <td><?php echo $value->id;?></td>
-                                            <td><?php echo $value->username;?></td>
-                                            <td><?php echo $value->email;?></td>
-                                            <td><a href="" class="badge badge-info text-white">ویرایش</a> | <a href=""
-                                                        class="badge badge-danger text-white">حذف</a></td>
-                                        </tr>
-                                    <?php } ?>
+                                    <?php
+                                    if (!empty($aparatchi['membermodel']->listmember())) {
+                                        foreach ($aparatchi['membermodel']->listmember() as $value) { ?>
+                                            <tr>
+                                                <td><?php echo $value->id; ?></td>
+                                                <td><?php echo $value->info; ?></td>
+                                                <td><?php echo $value->username; ?></td>
+                                                <td><?php echo $value->email; ?></td>
+                                                <td><a href="<?php echo AddressMyWebsite . 'update/memberEdit/'. $value->id; ?>"
+                                                       class="badge badge-info text-white">ویرایش</a> | <a
+                                                            href="<?php echo AddressMyWebsite . 'admindelete/deletemember/' . $value->id; ?>"
+                                                            class="badge badge-danger text-white">حذف</a></td>
+                                            </tr>
+                                        <?php }
+                                    } else {
+                                        echo '<div class="alert alert-warning" style="margin: 15px 10px">کاربری در وبسایت ثبت نام نکرده است</div>';
+                                    } ?>
                                     </tbody>
                                 </table>
                             </div>

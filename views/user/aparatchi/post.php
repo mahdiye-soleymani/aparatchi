@@ -6,25 +6,12 @@
             <ul>
                 <li>
                     <a href="#">
-                        <img src="<?php echo AddressMyWebsite;?>/public/user/images/tophit.png">
-                        <p>1بهترین تلفتن هوشمند</p>
-                        <p>1200000T</p>
+                        <img src="<?php echo AddressMyWebsite;?>/public/user/images/witcher2.jpg">
+                        <p>فصل دوم ویچر</p>
+                        <p>فصل دوم سریال مورد انتظار ویچر منتشر شد</p>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <img src="<?php echo AddressMyWebsite;?>/public/user/images/tophit.png">
-                        <p>2بهترین تلفتن هوشمند</p>
-                        <p>1200000T</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="<?php echo AddressMyWebsite;?>/public/user/images/tophit.png">
-                        <p>3بهترین تلفتن هوشمند</p>
-                        <p>1200000T</p>
-                    </a>
-                </li>
+
 
             </ul>
         </div>
@@ -39,25 +26,12 @@
             <ul>
                 <li>
                     <a href="#">
-                        <img src="<?php echo AddressMyWebsite;?>/public/user/images/tophit.png">
-                        <p>1بهترین تلفتن هوشمند</p>
-                        <p>1200000T</p>
+                        <img src="<?php echo AddressMyWebsite;?>/public/user/images/venom.jpg">
+                        <p>ونوم 2</p>
+                        <p>پس از چند سال ونوم برگشت!</p>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <img src="<?php echo AddressMyWebsite;?>/public/user/images/tophit.png">
-                        <p>2بهترین تلفتن هوشمند</p>
-                        <p>1200000T</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="<?php echo AddressMyWebsite;?>/public/user/images/tophit.png">
-                        <p>3بهترین تلفتن هوشمند</p>
-                        <p>1200000T</p>
-                    </a>
-                </li>
+
 
             </ul>
         </div>

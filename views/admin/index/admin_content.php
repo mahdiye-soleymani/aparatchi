@@ -1,15 +1,17 @@
-<div class="col-lg-6">
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title mb-2 text-bold">گزارش</h5>
+<div class="col-6 col-lg-3">
 
-            <p class="card-text">
-                بدنه
-            </p>
+    <!-- small box -->
+    <div class="small-box bg-warning">
+        <div class="inner">
+            <h3><?php echo $aparatchi['countmember']; ?></h3>
 
+            <p>کاربران ثبت شده</p>
         </div>
+        <div class="icon">
+            <i class="ion ion-person-add"></i>
+        </div>
+        <a href="<?php echo AddressMyWebsite . 'adminlistmember' ?>" class="small-box-footer">اطلاعات بیشتر <i
+                    class="fa fa-arrow-circle-left"></i></a>
     </div>
 
-
 </div>
-<!-- /.col-md-6 -->

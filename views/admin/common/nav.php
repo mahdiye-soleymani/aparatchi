@@ -5,7 +5,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" class="nav-link">خانه</a>
+            <a href="<?php echo AddressMyWebsite . 'adminindex' ?>" class="nav-link">خانه</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">تماس</a>
@@ -36,7 +36,9 @@
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                        <img src="<?php echo AddressMyWebsite;?>public\admin\dist\img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 ml-3 img-circle">
+                        <img src="<?php echo AddressMyWebsite . 'public/admin/' ?>dist/img/user1-128x128.jpg"
+                             alt="User Avatar"
+                             class="img-size-50 ml-3 img-circle">
                         <div class="media-body">
                             <h3 class="dropdown-item-title">
                                 حسام موسوی
@@ -52,7 +54,8 @@
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                        <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle ml-3">
+                        <img src="<?php echo AddressMyWebsite . 'public/admin/' ?>dist/img/user8-128x128.jpg"
+                             alt="User Avatar" class="img-size-50 img-circle ml-3">
                         <div class="media-body">
                             <h3 class="dropdown-item-title">
                                 پیمان احمدی
@@ -68,7 +71,8 @@
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                        <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle ml-3">
+                        <img src="<?php echo AddressMyWebsite . 'public/admin/' ?>dist/img/user3-128x128.jpg"
+                             alt="User Avatar" class="img-size-50 img-circle ml-3">
                         <div class="media-body">
                             <h3 class="dropdown-item-title">
                                 سارا وکیلی
