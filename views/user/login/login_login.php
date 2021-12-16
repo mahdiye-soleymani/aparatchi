@@ -1,25 +1,32 @@
 <div id="register">
     <div class="register_header">
-        <img src="<?php echo AddressMyWebsite;?>/public/user/images/register_page.png">
+        <img src="<?php echo AddressMyWebsite . 'public/user/' ?>images/register_page.png">
     </div>
     <div class="form_register">
-        <form id="form_register">
+        <?php
+        if($aparatchi['messageloginerrorsite'] !==null){
+            echo '<a class="BYekan-sm">'.$aparatchi['messageloginerrorsite'].'</a>';
+        }
+        ?>
+        <form id="form_register" method="post">
             <div>
-                <label  class="BYekan-sm">نام کاربری</label>
-                <input class="BYekan-sm" type="text" name="username" placeholder="نام کاربری خود را وارد کنید">
+
+                <label class="BYekan-sm">ایمیل</label>
+                <input class="BYekan-sm" type="email" name="email_loginsite" placeholder="ایمیل خود را وارد کنید">
             </div>
             <div>
-                <label  class="BYekan-sm">رمز عبور</label>
-                <input class="BYekan-sm" type="password" name="password" placeholder ="لطفا یک رمز عبور معتبر وارد کنید">
+                <label class="BYekan-sm">رمز عبور</label>
+                <input class="BYekan-sm" type="password" name="password_loginsite" placeholder="لطفا یک رمز عبور معتبر وارد کنید">
             </div>
 
             <div>
                 <label class="BYekan-sm">مرا بخاطر بسپار</label>
                 <input class="checkbox" type="checkbox" name="remember">
-                <a class="BYekan-sm" href="<?php echo  AddressMyWebsite.'forgetpass'?>">رمز عبور را فراموش کرده ام</a>
-            </div></br>
+                <a class="BYekan-sm" href="<?php echo AddressMyWebsite . 'forgetpassword'; ?>">رمز عبور را فراموش کرده ام</a>
+            </div>
+            </br>
             <div class="btn_register">
-                <input class="BYekan-sm" type="submit" name="submit" value="ثبت نام">
+                <input class="BYekan-sm" type="submit" name="btnloginsite" value="ورود به وبسایت">
             </div>
         </form>
     </div>

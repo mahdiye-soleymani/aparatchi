@@ -104,6 +104,7 @@ class memberModel extends database
         $result->bindValue(1,$email);
         $result->bindValue(2,$password);
         $result->execute();
+        //چون ایمیل مان باید یونیک باشذ
         if ($result->rowCount() == 1) {
             // اطلاعات صحیح میباشد
             return true;

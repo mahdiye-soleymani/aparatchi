@@ -45,6 +45,7 @@
                                     if (!empty($aparatchi['membermodel']->listmember())) {
                                         foreach ($aparatchi['membermodel']->listmember() as $value) { ?>
                                             <tr>
+
                                                 <td><?php echo $value->id; ?></td>
                                                 <td><?php echo $value->info; ?></td>
                                                 <td><?php echo $value->username; ?></td>
