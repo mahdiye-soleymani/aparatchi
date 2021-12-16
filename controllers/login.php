@@ -16,9 +16,12 @@ class login extends controller
                     if($membermodel->checkbanmember($emailloginsite)->status ==0){
                         //یعنی کاربر بن نمیباشد
                         // حالا اینجا باید عملیات لاگین به وبسایت انجام شود
-
                         $_SESSION['emailmember']=$emailloginsite;
+                        $ip = $membermodel->GetRealIp();
+                        /**/
+                        $membermodel->insertLog($_SESSION['emailmember'],$ip);
                         header('location:'.AddressMyWebsite);
+
 
 
 

@@ -125,4 +125,37 @@ class memberModel extends database
             return false;
         }
     }
+
+    public function insertLog($email, $ip)
+    {
+        $result = $this->connect->prepare('INSERT INTO `tbl_logusers` SET `email`=?,`ip`=?');
+        $result->bindValue(1, $email);
+        $result->bindValue(2, $ip);
+        $result->execute();
+    }
+
+    function GetRealIp()
+    {
+        if (!empty($_SERVER['HTTP_CLIENT_IP']))
+            //check ip from share internet
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+            //to check ip is pass from proxy
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        else
+            $ip = $_SERVER['REMOTE_ADDR'];
+        return $ip;
+    }
+
+    public function listlog()
+    {
+        $result = $this->connect->prepare('SELECT * FROM `tbl_logusers`');
+        $result->execute();
+        if ($result->rowCount() >= 1) {
+            // اطلاعات رو واکشی کن درصورتی که یک سطر یا بیشتر از یک سطر بتواند پیدا کند
+            return $result->fetchAll(PDO::FETCH_OBJ);
+        } else {
+            return false;
+        }
+    }
 }
