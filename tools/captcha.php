@@ -1,6 +1,6 @@
 <?php
 session_start();  // سشن نوعی از متغیر هست که مقادیر را بین صفحهات مختلف جابجا میکند
-header('Content-text:image/Png');
+header('Content-text:image/png');
 $randomnumbers = rand(11111,99999);
 $_SESSION['random_number'] = $randomnumbers;
 if(isset($_SESSION['random_number'])){
@@ -17,3 +17,4 @@ if(isset($_SESSION['random_number'])){
      imagepng($newimage); // تایین فرمت تصویر ایجاد شده توسط کتابخانه gd
     imagedestroy($newimage);
 }
+?>

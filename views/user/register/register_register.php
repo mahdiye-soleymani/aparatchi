@@ -29,12 +29,12 @@
                        placeholder="رمز عبور خود را مجددا وارد نمایید">
             </div>
 
-            <img style="margin-top: 20px;" src="<?php echo AddressMyWebsite.'tools/captcha.php'?>" />
-            <div>
-                <label class="BYekan-sm">کد امنیتی :</label>
-                <input class="BYekan-sm" type="text" name="captchacode"
-                       placeholder="کد بالا را وارد نمایید">
-            </div>
+<!--            <img style="margin-top: 20px;" src="--><?php //echo AddressMyWebsite.'tools/captcha.php'?><!--" />-->
+<!--            <div>-->
+<!--                <label class="BYekan-sm">کد امنیتی :</label>-->
+<!--                <input class="BYekan-sm" type="text" name="captchacode"-->
+<!--                       placeholder="کد بالا را وارد نمایید">-->
+<!--            </div>-->
             <div class="btn_register">
                 <input class="BYekan-sm" type="submit" name="submit_register" value="ثبت نام">
             </div>

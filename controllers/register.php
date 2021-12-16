@@ -7,7 +7,7 @@ class register extends controller
     {
         $message_error_register = null;
         $message_success_register = null;
-        $member_model = $this->loadModel('memberModel');  // فراخوانی مادل مربوط به کاربران از طریق متهد والد
+        $member_model = $this->loadModel('memberModel');  // فراخوانی مادل مربوط به کاربران از طریق متد والد
         if (isset($_POST['submit_register'])) {  // اگر روی دکمه کلیک شد
             if (!empty($_POST['username_register']) && !empty($_POST['email_register']) && !empty($_POST['password_register']) && !empty($_POST['info_register'])
                 && !empty($_POST['againpassword_register'])
@@ -22,7 +22,7 @@ class register extends controller
 
                     if ($_POST['password_register'] == $_POST['againpassword_register']) {
 
-                        if($_POST['captchacode'] ==$_SESSION['random_number']){  //بررسی کدی که درون سشن ایجاد شده در صفحه کپچا هست با مقداری که کاربر در درون اینپوت مربوط به کد امنیتی میزند یکسان میباشد یا ن
+//                        if($_POST['captchacode'] ==$_SESSION['random_number']){  //بررسی کدی که درون سشن ایجاد شده در صفحه کپچا هست با مقداری که کاربر در درون اینپوت مربوط به کد امنیتی میزند یکسان میباشد یا ن
 
 
                             $emailregister = trim_url(security($_POST['email_register'])); // گرفتن ایمیل و قرار دادن درون یک متغیر
@@ -37,9 +37,9 @@ class register extends controller
                             }
 
 
-                        }else{
-                            $message_error_register ='کد امنیتی به درستی وارد نشده است';
-                        }
+//                        }else{
+//                            $message_error_register ='کد امنیتی به درستی وارد نشده است';
+//                        }
 
                     } else {
                         $message_error_register = 'رمز عبور با تکرار رمز عبور یکسان نمیباشد';
