@@ -48,7 +48,12 @@ if (!isset($_SESSION['wellcom_to_adminindex'])) {
                                     <p>لیست کاربران</p>
                                 </a>
                             </li>
-
+                            <li class="nav-item">
+                                <a href="<?php echo AddressMyWebsite; ?>adminloglist" class="nav-link active">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>لاگ کاربران</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
