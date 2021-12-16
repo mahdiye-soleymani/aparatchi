@@ -1,5 +1,3 @@
-
-
 <?php require_once __DIR__ . DIRECTORY_SEPARATOR . '../common/header.php'; ?>
 <!----start Main_header--->
 <?php require_once __DIR__ . DIRECTORY_SEPARATOR . '../common/topheader.php'; ?>
