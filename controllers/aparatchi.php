@@ -1,7 +1,7 @@
 <?php
 
 
-// این کنترلر پیشفرض این برنامه میباشد
+// کنترلر پیشفرض
 
 class aparatchi extends controller
 {

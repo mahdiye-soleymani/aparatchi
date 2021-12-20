@@ -1,6 +1,5 @@
 <?php
 
-//tbl_users
 class memberModel extends database
 {
     public function register($info, $username, $email, $password)
@@ -16,7 +15,6 @@ class memberModel extends database
             return false;
         }
 
-        // خروجی تابع رو به صورت بولینی کردیم (یا انجام میشه یا انجام نمیشه )
     }
 
 
@@ -28,10 +26,9 @@ class memberModel extends database
         $result->execute();
         if ($result->rowCount() == 1) {
             return true;
-            // اینجا نتیجه میگیریم ایمیلی که کاربر وارد کرده قبلا یکی با ان ایمیل در وبسایت ما ثبت نام کرده است
+            //  ایمیل تکراریه
         } else {
             return false;
-            //با این ایمیل کسی در وبسایت ما ثبت نام نکرده است
         }
     }
 
@@ -95,8 +92,6 @@ class memberModel extends database
         } else {
             return false;
         }
-
-        // خروجی تابع رو به صورت بولینی کردیم (یا انجام میشه یا انجام نمیشه )
     }
 
     public function logintosite($email,$password){
@@ -107,7 +102,7 @@ class memberModel extends database
         //چون ایمیل مان باید یونیک باشد
         if ($result->rowCount() == 1) {
             if (!empty($_POST['rememberloginsite'])) {
-                /*یعنی زمانی که تیک را زده ایم*/
+                /* زمانی که تیک را زده ایم*/
                 setcookie('EmailCookie', $email, time() + 86400);
                 setcookie('PasswordCookie', $password, time() + 86400);
             } else {
@@ -118,7 +113,7 @@ class memberModel extends database
                 if(isset($_COOKIE['PasswordCookie'])){
                     setcookie('PasswordCookie','');
                 }
-                /*یعنی زمانی که تیک را نزده ایم*/
+                /* زمانی که تیک را نزده ایم*/
             }
             // اطلاعات صحیح میباشد
             return true;
@@ -133,7 +128,7 @@ class memberModel extends database
         $result->bindValue(1,$email);
         $result->execute();
         if ($result->rowCount() == 1) {
-            // اطلاعات رو واکشی کن درصورتی که یک سطر یا بیشتر از یک سطر بتواند پیدا کند
+            //چون فقط یدونس
             return $result->fetch(PDO::FETCH_OBJ);
         } else {
             return false;

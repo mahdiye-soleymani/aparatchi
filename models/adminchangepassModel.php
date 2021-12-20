@@ -9,10 +9,9 @@ class adminchangepassModel extends database
         $result->bindValue(1, $password);
         $result->execute();
         if ($result->rowCount() == 1) {
-            // اکر پسورد با پسورد داده شده یکسان بود ترو را برگردان
+            // اکر پسورد با پسورد داده شده یکسان بود
             return true;
         } else {
-            // در غیر این صورت فالس رابرگردان
             return false;
         }
     }

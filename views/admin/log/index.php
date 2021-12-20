@@ -9,15 +9,11 @@
 
     <!-- Content Wrapper. Contains page content -->
 
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
         <br/>
         <div class="content">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-
-                    <!--کدهای خودمان را قرار میدهیم-->
 
                     <div class="col-sm-12">
 
@@ -75,8 +71,6 @@
         <div class="float-right d-none d-sm-inline">
             <!--        Anything you want-->
         </div>
-        <!-- Default to the left -->
-        <!--    <strong>CopyLeft &copy; 2018 <a href="http://github.com/hesammousavi/">وبسایت زیکو</a>.</strong>-->
     </footer>
 </div>
 

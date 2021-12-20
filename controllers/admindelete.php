@@ -1,9 +1,9 @@
 <?php
 
-
+//دلیت کاربران
 class admindelete extends controller
 {
-    protected $address = 'http://localhost:81/siteaparatchi/';
+    protected $address = 'http://localhost:81/aparatchi/';
     public function deletemember($id)
     {
         $membermodel = $this->loadModel('memberModel');

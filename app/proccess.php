@@ -22,7 +22,7 @@ class proccess
             $this->location = 'controllers/' . $this->controller . '.php';  // مسیر کنترلر را معرفی میکنیم
             $this->createObject();  // ایجاد یک نمونه از روی کنترلری که کاربر وارد میکند
             $this->checkMethod(); // بررسی اینکه ایا متد مورد نظر درون کنتلر میباشد یا ن
-            $this->proccessApp(); // در اینجا هم محتوای موجود در متد درون کنترلر اجرا خواهد شد
+            $this->proccessApp(); // اجرای محتوای در متد درون کنترلر
 
         } else {
 
@@ -48,12 +48,12 @@ class proccess
     public function setController()
     {
 
-        if ($this->explode[0] == 'index.php' || $this->explode[0] == '')  {
+        if ($this->explode[0] == 'index.php' || $this->explode[0] == '') {
             $this->controller = 'aparatchi'; //مقدار پیشفرض رو برابر ایندکس قرار بده
         } else {
-            // اومدیم و کنترلر رو تشخیص دادیم و ریختیم درون پراپرتی کنترلر
+            // بعد تشخیص کنترلر درون پراپرتی کنترلر میریزیم
             $this->controller = $this->explode[0];
-            unset($this->explode[0]); // در واقع حالا خونه صفرم ارایه رو بعد از ریختن درون پراپرتی کنترلر که در بالا مشاهده میکنید حذف کرده ایم
+            unset($this->explode[0]); //  خونه صفرم ارایه رو بعد از ریختن درون پراپرتی کنترلر  رو حذف میکنیم
         }
     }
 
@@ -100,9 +100,7 @@ class proccess
         call_user_func_array(array($this->obj, $this->method), $this->explode);
     }
 
-
 }
-
 
 $object = new proccess(); //یک نمونه از روی کلاس ساخته ایم
 

@@ -1,3 +1,4 @@
+<!--درستش کن-->
 <div id="register" style="height: 270px;">
     <div class="register_header">
         <img src="<?php echo AddressMyWebsite;?>/public/user/images/register_page.png">

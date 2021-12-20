@@ -3,8 +3,7 @@
 
 class database
 {
-    protected $connect; // سطح دسترسی این متغیر رو بر روی پروتکتید
-    //prot
+    protected $connect;
 
     public function __construct()
     {

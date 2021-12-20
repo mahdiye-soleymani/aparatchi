@@ -11,7 +11,7 @@ class adminlogin extends controller
             $check_login = $this->loadModel('adminloginModel')->Login_admin($email, $password);
             if ($check_login) {
                 // اکر مدیر مشخصات ورود رو درست زده باشه
-                $_SESSION['wellcom_to_adminindex'] = $email;   // ایجاد سشن
+                $_SESSION['wellcom_to_adminindex'] = $email;
                 header('location:adminindex');
             } else {
                 // اگر مدیر مشخصات ورود رو اشتباه زده باشه

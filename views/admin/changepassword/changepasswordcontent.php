@@ -12,14 +12,12 @@
             <div class="card-body">
                 <?php if ($aparatchi['messageErrorChangePasswordAdmin'] != null){ ?>
                 <div class="alert alert-danger">
-                    <!--                <p>متن مورد نظر ما</p>-->
                     <?php echo $aparatchi['messageErrorChangePasswordAdmin']; ?>
                 </div>
                 <?php }?>
 
                 <?php if ($aparatchi['messageSuccessChangePasswordAdmin'] != null){ ?>
                     <div class="alert alert-success">
-                        <!--                <p>متن مورد نظر ما</p>-->
                         <?php echo $aparatchi['messageSuccessChangePasswordAdmin']; ?>
                     </div>
                 <?php }?>
@@ -40,7 +38,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer">
-                <button type="submit" name="btnchangepasswordadmin" class="btn btn-primary btn-block">اعمال تغییرات
+                <button type="submit" name="btnchangepasswordadmin" class="btn btn-warning btn-block">اعمال تغییرات
                 </button>
             </div>
         </form>

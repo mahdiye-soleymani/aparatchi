@@ -1,5 +1,5 @@
 <div class="tophit">
-    <h3 class="slider_h3 BYekan-sm">پربازدیدترین پست ها </h3>
+    <h3 class="slider_h3 BYekan-sm">پر بازدید ترین پست ها </h3>
     <div class="slider_main_content">
         <div class="slider_prev"><span class="prev_icon"></span></div>
         <div class="slider_content">
@@ -11,8 +11,6 @@
                         <p>فصل دوم سریال مورد انتظار ویچر منتشر شد</p>
                     </a>
                 </li>
-
-
             </ul>
         </div>
         <div class="slider_next"><span class="next_icon"></span></div>

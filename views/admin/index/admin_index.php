@@ -41,7 +41,7 @@
             Anything you want
         </div>
         <!-- Default to the left -->
-        <strong>CopyLeft &copy; 2021 <a href="#">مهدیه سلیمانی</a>.</strong>
+<!--        <strong>CopyLeft &copy; 2021 <a href="#">مهدیه سلیمانی</a>.</strong>-->
     </footer>
 </div>
 <?php require_once __DIR__ . DIRECTORY_SEPARATOR . '../common/footer.php'; ?>

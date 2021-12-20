@@ -2,20 +2,6 @@
     <div id="footer">
         <div class="footer_top">
             <div class="main_footer">
-                <div class="ft_right"><p class="BYekan-sm">در طول هفته 24 ساعته پاسخگوی شما هستیم</p></div>
-                <div class="ft_left">
-                    <ul class="BYekan-sm">
-                        <li>
-                            <a>04458791456</a>
-                        </li>
-                        <li>
-                            <a>سوالات متداول</a>
-                        </li>
-                        <li>
-                            <a>info@daneshjooyar.com</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
         <div class="footer_bottom">

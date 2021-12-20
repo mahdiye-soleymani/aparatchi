@@ -62,7 +62,6 @@
             <!--        Anything you want-->
         </div>
         <!-- Default to the left -->
-        <!--    <strong>CopyLeft &copy; 2018 <a href="http://github.com/hesammousavi/">وبسایت زیکو</a>.</strong>-->
     </footer>
 </div>
 

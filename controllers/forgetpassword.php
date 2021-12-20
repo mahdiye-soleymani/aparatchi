@@ -1,6 +1,6 @@
 <?php
-
-class forgetpass extends controller
+//درستش کن
+class forgetpassword extends controller
 {
     public function indexAction()
     {

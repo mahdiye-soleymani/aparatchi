@@ -1,3 +1,4 @@
+<center>
 <nav id="top_nav">
     <div id="top_menu">
         <ul class="BYekan-sm">
@@ -45,3 +46,4 @@
         </ul>
     </div>
 </nav>
+</center>

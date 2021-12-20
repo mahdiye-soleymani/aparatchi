@@ -11,19 +11,13 @@ class login extends controller
                 $emailloginsite = trim_url(security($_POST['email_loginsite']));
                 $passwordloginsite = trim_url($_POST['password_loginsite']);
 
-                if ($membermodel->logintosite($emailloginsite, $passwordloginsite)) { // خروجی true هست یعنی مشخصات به درستی وارد شده است
+                if ($membermodel->logintosite($emailloginsite, $passwordloginsite)) { // مشخصات به درستی وارد شده بود
 
-                    if($membermodel->checkbanmember($emailloginsite)->status ==0){
-                        //یعنی کاربر بن نمیباشد
-                        // حالا اینجا باید عملیات لاگین به وبسایت انجام شود
+                    if($membermodel->checkbanmember($emailloginsite)->status ==0){//یعنی کاربر بن نیس
                         $_SESSION['emailmember']=$emailloginsite;
                         $ip = $membermodel->GetRealIp();
-                        /**/
                         $membermodel->insertLog($_SESSION['emailmember'],$ip);
                         header('location:'.AddressMyWebsite);
-
-
-
 
                     }else{
                         $messageloginerrorsite ='دسترسی شما به سایت تا مدت نا مشخصی محدود شده است و امکان ورود نمیباشد';

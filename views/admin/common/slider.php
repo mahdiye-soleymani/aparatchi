@@ -18,12 +18,12 @@ if (!isset($_SESSION['wellcom_to_adminindex'])) {
         <div>
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                <!--                <div class="image">-->
-                <!--                    <img src="https://www.gravatar.com/avatar/52f0fbcbedee04a121cba8dad1174462?s=200&d=mm&r=g"-->
-                <!--                         class="img-circle elevation-2" alt="User Image">-->
-                <!--                </div>-->
+                                <div class="image">
+                                    <img src="<?php echo AddressMyWebsite;?>/public/admin/dist/img/avatar2.png"
+                                         class="img-circle elevation-2" alt="User Image">
+                                </div>
                 <div class="info">
-                    <a href="#" class="d-block text-white">مدیر وبسایت : مهدی ارشادی</a>
+                    <a href="#" class="d-block text-white">مدیر سایت : مهدیه سلیمانی</a>
                 </div>
             </div>
 

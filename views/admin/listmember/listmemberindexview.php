@@ -17,11 +17,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-center">
 
-                    <!--کدهای خودمان را قرار میدهیم-->
-
                     <div class="col-sm-10">
-
-
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">لیست کاربران</h3>
@@ -82,7 +78,7 @@
             <!--        Anything you want-->
         </div>
         <!-- Default to the left -->
-        <!--    <strong>CopyLeft &copy; 2018 <a href="http://github.com/hesammousavi/">وبسایت زیکو</a>.</strong>-->
+
     </footer>
 </div>
 

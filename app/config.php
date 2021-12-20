@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . DIRECTORY_SEPARATOR . '../tools/jdf.php'; // فراخوانی فایل شمسی کردن تاریخ
-    const AddressMyWebsite = 'http://localhost:81/siteaparatchi/';
+    const AddressMyWebsite = 'http://localhost:81/aparatchi/';
     if (!isset($_SESSION)) {
         // چک میشود اگر سشن در پروژه ما استارت نشده بود سشن را استارت میکند
         session_start();
@@ -33,6 +33,7 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . '../tools/jdf.php'; // فراخوا
     {
         return md5((uniqid(rand())));
     }
+    //تاریخ شمسی
     function shamsi($time)
     {
         $result = explode(' ', $time);
