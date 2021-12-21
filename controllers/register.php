@@ -21,7 +21,7 @@ class register extends controller
 
                     if ($_POST['password_register'] == $_POST['againpassword_register']) {
 
-//                        if($_POST['captchacode'] ==$_SESSION['random_number']){  //بررسی کدی توی سشن صفحه کپچا  با مقداری که کاربر وارد کرده
+                      if($_POST['captchacode'] ==$_SESSION['random_number']){  //بررسی کدی توی سشن صفحه کپچا  با مقداری که کاربر وارد کرده
 
                             $emailregister = trim_url(security($_POST['email_register'])); // گرفتن ایمیل و قرار دادن درون یک متغیر
                             $usernameregister = trim_url(security($_POST['username_register'])); // گرفتن یوزر نیم و قرار دادن درون یک متغیر
@@ -35,9 +35,9 @@ class register extends controller
                             }
 
 
-//                        }else{
-//                            $message_error_register ='کد امنیتی به درستی وارد نشده است';
-//                        }
+                        }else{
+                            $message_error_register ='کد امنیتی به درستی وارد نشده است';
+                        }
 
                     } else {
                         $message_error_register = 'رمز عبور با تکرار رمز عبور یکسان نمیباشد';
