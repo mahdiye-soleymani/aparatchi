@@ -80,13 +80,14 @@ class memberModel extends database
     }
 
 
-    public function updatemember($info, $username, $email, $banmember)
+    public function updatemember($info, $username, $email, $banmember,$id)
     {
-        $result = $this->connect->prepare('UPDATE `tbl_users` SET `info`=?,`username`=?,`email`=?,`status`=?');
+        $result = $this->connect->prepare('UPDATE `tbl_users` SET `info`=?,`username`=?,`email`=?,`status`=? WHERE `id`=?');
         $result->bindValue(1, $info);
         $result->bindValue(2, $username);
         $result->bindValue(3, $email);
         $result->bindValue(4, $banmember);
+        $result->bindValue(5,$id);
         if ($result->execute()) {
             return true;
         } else {
