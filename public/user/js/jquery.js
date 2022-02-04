@@ -18,7 +18,7 @@ $(document).ready(function(){
 		},600);
 	});
 
-	var slider = $("#slider");
+	var slider = $("#creatslider");
 	var sliderItem = slider.find("#slider_item_img .show_item");
     var sliderLi = slider.find("#li_nav li");
     var totalItem = sliderItem.length;

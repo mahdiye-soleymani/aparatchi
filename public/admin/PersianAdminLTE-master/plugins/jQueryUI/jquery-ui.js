@@ -1,6 +1,6 @@
 /*! jQuery UI - v1.11.4 - 2015-03-11
 * http://jqueryui.com
-* Includes: core.js, widget.js, mouse.js, position.js, accordion.js, autocomplete.js, button.js, datepicker.js, dialog.js, draggable.js, droppable.js, effect.js, effect-blind.js, effect-bounce.js, effect-clip.js, effect-drop.js, effect-explode.js, effect-fade.js, effect-fold.js, effect-highlight.js, effect-puff.js, effect-pulsate.js, effect-scale.js, effect-shake.js, effect-size.js, effect-slide.js, effect-transfer.js, menu.js, progressbar.js, resizable.js, selectable.js, selectmenu.js, slider.js, sortable.js, spinner.js, tabs.js, tooltip.js
+* Includes: core.js, widget.js, mouse.js, position.js, accordion.js, autocomplete.js, button.js, datepicker.js, dialog.js, draggable.js, droppable.js, effect.js, effect-blind.js, effect-bounce.js, effect-clip.js, effect-drop.js, effect-explode.js, effect-fade.js, effect-fold.js, effect-highlight.js, effect-puff.js, effect-pulsate.js, effect-scale.js, effect-shake.js, effect-size.js, effect-slide.js, effect-transfer.js, menu.js, progressbar.js, resizable.js, selectable.js, selectmenu.js, creatslider.js, sortable.js, spinner.js, tabs.js, tooltip.js
 * Copyright 2015 jQuery Foundation and other contributors; Licensed MIT */
 
 (function( factory ) {
@@ -12816,7 +12816,7 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 		stop: null
 	},
 
-	// number of pages in a slider
+	// number of pages in a creatslider
 	// (how many times can you page up/down to go through the whole range)
 	numPages: 5,
 
@@ -12830,8 +12830,8 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 		this._calculateNewMax();
 
 		this.element
-			.addClass( "ui-slider" +
-				" ui-slider-" + this.orientation +
+			.addClass( "ui-creatslider" +
+				" ui-creatslider-" + this.orientation +
 				" ui-widget" +
 				" ui-widget-content" +
 				" ui-corner-all");
@@ -12852,8 +12852,8 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 	_createHandles: function() {
 		var i, handleCount,
 			options = this.options,
-			existingHandles = this.element.find( ".ui-slider-handle" ).addClass( "ui-state-default ui-corner-all" ),
-			handle = "<span class='ui-slider-handle ui-state-default ui-corner-all' tabindex='0'></span>",
+			existingHandles = this.element.find( ".ui-creatslider-handle" ).addClass( "ui-state-default ui-corner-all" ),
+			handle = "<span class='ui-creatslider-handle ui-state-default ui-corner-all' tabindex='0'></span>",
 			handles = [];
 
 		handleCount = ( options.values && options.values.length ) || 1;
@@ -12872,7 +12872,7 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 		this.handle = this.handles.eq( 0 );
 
 		this.handles.each(function( i ) {
-			$( this ).data( "ui-slider-handle-index", i );
+			$( this ).data( "ui-creatslider-handle-index", i );
 		});
 	},
 
@@ -12895,12 +12895,12 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 				this.range = $( "<div></div>" )
 					.appendTo( this.element );
 
-				classes = "ui-slider-range" +
+				classes = "ui-creatslider-range" +
 				// note: this isn't the most fittingly semantic framework class for this element,
 				// but worked best visually with a variety of themes
 				" ui-widget-header ui-corner-all";
 			} else {
-				this.range.removeClass( "ui-slider-range-min ui-slider-range-max" )
+				this.range.removeClass( "ui-creatslider-range-min ui-creatslider-range-max" )
 					// Handle range switching from true to min/max
 					.css({
 						"left": "",
@@ -12909,7 +12909,7 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 			}
 
 			this.range.addClass( classes +
-				( ( options.range === "min" || options.range === "max" ) ? " ui-slider-range-" + options.range : "" ) );
+				( ( options.range === "min" || options.range === "max" ) ? " ui-creatslider-range-" + options.range : "" ) );
 		} else {
 			if ( this.range ) {
 				this.range.remove();
@@ -12932,9 +12932,9 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 		}
 
 		this.element
-			.removeClass( "ui-slider" +
-				" ui-slider-horizontal" +
-				" ui-slider-vertical" +
+			.removeClass( "ui-creatslider" +
+				" ui-creatslider-horizontal" +
+				" ui-creatslider-vertical" +
 				" ui-widget" +
 				" ui-widget-content" +
 				" ui-corner-all" );
@@ -12984,7 +12984,7 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 			.focus();
 
 		offset = closestHandle.offset();
-		mouseOverHandle = !$( event.target ).parents().addBack().is( ".ui-slider-handle" );
+		mouseOverHandle = !$( event.target ).parents().addBack().is( ".ui-creatslider-handle" );
 		this._clickOffset = mouseOverHandle ? { left: 0, top: 0 } : {
 			left: event.pageX - offset.left - ( closestHandle.width() / 2 ),
 			top: event.pageY - offset.top -
@@ -13221,8 +13221,8 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 			case "orientation":
 				this._detectOrientation();
 				this.element
-					.removeClass( "ui-slider-horizontal ui-slider-vertical" )
-					.addClass( "ui-slider-" + this.orientation );
+					.removeClass( "ui-creatslider-horizontal ui-creatslider-vertical" )
+					.addClass( "ui-creatslider-" + this.orientation );
 				this._refreshValue();
 
 				// Reset positioning from previous orientation
@@ -13406,7 +13406,7 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 	_handleEvents: {
 		keydown: function( event ) {
 			var allowed, curVal, newVal, step,
-				index = $( event.target ).data( "ui-slider-handle-index" );
+				index = $( event.target ).data( "ui-creatslider-handle-index" );
 
 			switch ( event.keyCode ) {
 				case $.ui.keyCode.HOME:
@@ -13471,7 +13471,7 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 			this._slide( event, index, newVal );
 		},
 		keyup: function( event ) {
-			var index = $( event.target ).data( "ui-slider-handle-index" );
+			var index = $( event.target ).data( "ui-creatslider-handle-index" );
 
 			if ( this._keySliding ) {
 				this._keySliding = false;

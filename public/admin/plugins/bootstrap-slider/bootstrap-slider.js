@@ -1,5 +1,5 @@
 /*! =========================================================
- * bootstrap-slider.js
+ * bootstrap-creatslider.js
  *
  * Maintainers: 
  *		Kyle Kemp 
@@ -179,7 +179,7 @@
 			formatInvalidInputErrorMsg : function(input) {
 				return "Invalid input value '" + input + "' passed in";
 			},
-			callingContextNotSliderInstance : "Calling context element does not have instance of Slider bound to it. Check your code to make sure the JQuery object returned from the call to the slider() initializer is calling the method"
+			callingContextNotSliderInstance : "Calling context element does not have instance of Slider bound to it. Check your code to make sure the JQuery object returned from the call to the creatslider() initializer is calling the method"
 		};
 
 
@@ -216,22 +216,22 @@
 			if (this.sliderElem) {
 				updateSlider = true;
 			} else {
-				/* Create elements needed for slider */
+				/* Create elements needed for creatslider */
 				this.sliderElem = document.createElement("div");
 				this.sliderElem.className = "slider";
 
-				/* Create slider track elements */
+				/* Create creatslider track elements */
 				var sliderTrack = document.createElement("div");
-				sliderTrack.className = "slider-track";
+				sliderTrack.className = "creatslider-track";
 
 				sliderTrackSelection = document.createElement("div");
-				sliderTrackSelection.className = "slider-selection";
+				sliderTrackSelection.className = "creatslider-selection";
 
 				sliderMinHandle = document.createElement("div");
-				sliderMinHandle.className = "slider-handle min-slider-handle";
+				sliderMinHandle.className = "creatslider-handle min-creatslider-handle";
 
 				sliderMaxHandle = document.createElement("div");
-				sliderMaxHandle.className = "slider-handle max-slider-handle";
+				sliderMaxHandle.className = "creatslider-handle max-creatslider-handle";
 
 				sliderTrack.appendChild(sliderTrackSelection);
 				sliderTrack.appendChild(sliderMinHandle);
@@ -268,7 +268,7 @@
 				this.sliderElem.appendChild(sliderTooltipMin);
 				this.sliderElem.appendChild(sliderTooltipMax);
 
-				/* Append slider element to parent container, right before the original <input> element */
+				/* Append creatslider element to parent container, right before the original <input> element */
 				parent.insertBefore(this.sliderElem, this.element);
 				
 				/* Hide original <input> element */
@@ -306,7 +306,7 @@
 			}
 
 			function getDataAttrib(element, optName) {
-				var dataName = "data-slider-" + optName;
+				var dataName = "data-creatslider-" + optName;
 				var dataValString = element.getAttribute(dataName);
 				
 				try {
@@ -338,8 +338,8 @@
 
 			if (updateSlider === true) {
 				// Reset classes
-				this._removeClass(this.sliderElem, 'slider-horizontal');
-				this._removeClass(this.sliderElem, 'slider-vertical');
+				this._removeClass(this.sliderElem, 'creatslider-horizontal');
+				this._removeClass(this.sliderElem, 'creatslider-vertical');
 				this._removeClass(this.tooltip, 'hide');
 				this._removeClass(this.tooltip_min, 'hide');
 				this._removeClass(this.tooltip_max, 'hide');
@@ -368,7 +368,7 @@
 			}
 
 			if(this.options.orientation === 'vertical') {
-				this._addClass(this.sliderElem,'slider-vertical');
+				this._addClass(this.sliderElem,'creatslider-vertical');
 				
 				this.stylePos = 'top';
 				this.mousePos = 'pageY';
@@ -383,7 +383,7 @@
 				this._addClass(this.tooltip_max, 'right');
 				this.tooltip_max.style.left = '100%';
 			} else {
-				this._addClass(this.sliderElem, 'slider-horizontal');
+				this._addClass(this.sliderElem, 'creatslider-horizontal');
 				this.sliderElem.style.width = origWidth;
 
 				this.options.orientation = 'horizontal';
@@ -582,10 +582,10 @@
 			},
 
 			destroy: function(){
-				// Remove event handlers on slider elements
+				// Remove event handlers on creatslider elements
 				this._removeSliderEventHandlers();
 
-				// Remove the slider from the DOM
+				// Remove the creatslider from the DOM
 				this.sliderElem.parentNode.removeChild(this.sliderElem);
 				/* Show original <input> element */
 				this.element.style.display = "";
@@ -607,7 +607,7 @@
 				this.options.enabled = false;
 				this.handle1.removeAttribute("tabindex");
 				this.handle2.removeAttribute("tabindex");
-				this._addClass(this.sliderElem, 'slider-disabled');
+				this._addClass(this.sliderElem, 'creatslider-disabled');
 				this._trigger('slideDisabled');
 
 				return this;
@@ -617,7 +617,7 @@
 				this.options.enabled = true;
 				this.handle1.setAttribute("tabindex", 0);
 				this.handle2.setAttribute("tabindex", 0);
-				this._removeClass(this.sliderElem, 'slider-disabled');
+				this._removeClass(this.sliderElem, 'creatslider-disabled');
 				this._trigger('slideEnabled');
 
 				return this;
@@ -664,7 +664,7 @@
 				this._removeSliderEventHandlers();
 				createNewSlider.call(this, this.element, this.options);
 				if($) {
-					// Bind new instance of slider to the element
+					// Bind new instance of creatslider to the element
 					$.data(this.element, 'slider', this);
 				}
 				return this;

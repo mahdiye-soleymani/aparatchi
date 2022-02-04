@@ -827,7 +827,7 @@
 
             var target = $(e.target);
 
-            //detect the slider and set the limits and callbacks
+            //detect the creatslider and set the limits and callbacks
             var zone = target.closest('div');
             var sl = this.options.horizontal ? this.options.slidersHorz : this.options.sliders;
             if (!zone.is('.colorpicker')) {
