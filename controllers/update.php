@@ -14,7 +14,6 @@ class update extends controller
             $emailupdateregister = trim_url(security($_POST['emailupdateregister']));
             $usernameupdateregister = trim_url(security($_POST['usernameupdateregister']));
             $banmember = trim_url(security($_POST['banmember']));
-//            $id=$this.$id;
             if ($membermodel->updatemember($infoupdateregister, $usernameupdateregister, $emailupdateregister, $banmember,$id)) {
                 header('location:' . AddressMyWebsite . 'adminlistmember');
             }

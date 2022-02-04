@@ -6,7 +6,7 @@ if (!isset($_SESSION['wellcom_to_adminindex'])) {
 ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="#" class="brand-link">
         <img src="<?php echo AddressMyWebsite . 'public/admin/' ?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
              class="brand-image img-circle elevation-3"
              style="opacity: .8">
@@ -52,6 +52,29 @@ if (!isset($_SESSION['wellcom_to_adminindex'])) {
                                 <a href="<?php echo AddressMyWebsite; ?>adminloglist" class="nav-link active">
                                     <i class="fa fa-circle-o nav-icon"></i>
                                     <p>لاگ کاربران</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link ">
+                            <i class="nav-icon fa fa-dashboard"></i>
+                            <p>
+                                مدیریت منو
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="<?php echo AddressMyWebsite; ?>addCategory" class="nav-link active">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>افزودن دسته بندی</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo AddressMyWebsite; ?>listCategory" class="nav-link active">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>لیست دسته بندی</p>
                                 </a>
                             </li>
                         </ul>

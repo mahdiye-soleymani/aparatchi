@@ -33,8 +33,9 @@
                                     <tr>
                                         <th>شماره</th>
                                         <th>ایمیل</th>
-                                        <th>ایپی</th>
+                                        <th>ip</th>
                                         <th>زمان</th>
+                                        <th>حذف</th>
                                     </tr>
                                     <?php
                                     if (!empty($aparatchi['membermodel']->listlog())) {
@@ -44,10 +45,12 @@
                                                 <td><?php echo $value->email; ?></td>
                                                 <td><?php echo $value->ip; ?></td>
                                                 <td><?php echo shamsi($value->time); ?></td>
+                                                <td><a href="<?php echo AddressMyWebsite . 'userlogdelete/deletelogmember/'. $value->id; ?>"
+                                                       class="badge badge-danger text-white">حذف</a></td>
                                             </tr>
                                         <?php }
                                     } else {
-                                        echo '<div class="alert alert-warning" style="margin: 15px 10px">کاربری در وبسایت ثبت نام نکرده است</div>';
+                                        echo '<div class="alert alert-warning" style="margin: 15px 10px">کاربری در وبسایت ورود نکرده است</div>';
                                     } ?>
                                     </tbody>
                                 </table>

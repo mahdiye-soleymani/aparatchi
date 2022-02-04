@@ -66,6 +66,16 @@ class memberModel extends database
             return false;
         }
     }
+    public function deletememberlog($id)
+    {
+        $result = $this->connect->prepare('DELETE FROM `tbl_logusers` WHERE `id`=?');
+        $result->bindValue(1, $id);
+        if ($result->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     public function listmemberwithid($id)
     {
         $result = $this->connect->prepare('SELECT * FROM `tbl_users` WHERE `id`=?');

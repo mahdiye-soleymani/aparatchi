@@ -39,6 +39,7 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . '../tools/jdf.php'; // فراخوا
         $result = explode(' ', $time);
         list($year, $mon, $day) = explode('-', $result[0]);
         list($hour, $min, $sec) = explode(':', $result[1]);
-        return jdate('Y-m-d H:i:s', time());
+        $time_stamp=mktime($hour,$min,$sec, $mon, $day,$year);
+        return jdate('Y-m-d H:i:s',$time_stamp);
     }
 ?>
