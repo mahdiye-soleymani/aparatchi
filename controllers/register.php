@@ -5,6 +5,8 @@ class register extends controller
 {
     public function indexAction()
     {
+        $categorymodel = $this->loadModel('categorymodel');
+        $listMenuShow = $categorymodel->listMenuShow();
 
         $message_error_register = null;
         $message_success_register = null;
@@ -55,7 +57,7 @@ class register extends controller
         $this->loadView('user/register/register_index', array('title' => 'ثبت نام در سایت',
             'error' => $message_error_register,
             'success' => $message_success_register
-
+        , 'listMenuShow' => $listMenuShow,'listSubMenuShow'=>$categorymodel
         ));
     }
 }

@@ -20,5 +20,6 @@
         })
     })
 </script>
+<script src="//cdn.ckeditor.com/4.11.1/full/ckeditor.js"></script>
 </body>
 </html>

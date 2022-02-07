@@ -4,6 +4,9 @@ class login extends controller
 {
     public function indexAction()
     {
+        $categorymodel = $this->loadModel('categorymodel');
+        $listMenuShow = $categorymodel->listMenuShow();
+
         $messageloginerrorsite = null;
         $membermodel = $this->loadModel('memberModel');
         if (isset($_POST['btnloginsite'])) {
@@ -31,6 +34,7 @@ class login extends controller
         }
         $this->loadView('user/login/login_index', array('title' => '.: APARATCHI | ورود :.'
         ,'messageloginerrorsite'=>$messageloginerrorsite
+        , 'listMenuShow' => $listMenuShow,'listSubMenuShow'=>$categorymodel
         ));
     }
 }
