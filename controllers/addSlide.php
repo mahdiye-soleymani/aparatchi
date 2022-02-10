@@ -12,6 +12,7 @@ class addSlide extends controller
         }
 
         $this->loadView('admin/creatslider/addSlide', array('title' => '.: APARATCHI |اضافه کردن اسلاید :.'));
+
     }
 
 }

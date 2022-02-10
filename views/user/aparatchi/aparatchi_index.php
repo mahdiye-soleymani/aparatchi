@@ -1,8 +1,3 @@
-
-
-
-
-
 <?php require_once __DIR__ . DIRECTORY_SEPARATOR . '../common/header.php'; ?>
 <!----start Main_header--->
 <?php require_once __DIR__ . DIRECTORY_SEPARATOR . '../common/topheader.php'; ?>
@@ -20,9 +15,11 @@
     <!-----------start-content-------------->
     <div id="content">
         <?php require_once __DIR__ . DIRECTORY_SEPARATOR . 'slider.php'; ?>
+
         <?php require_once __DIR__ . DIRECTORY_SEPARATOR . 'post.php'; ?>
     </div>
     <!-----------End-content-------------->
-</div>
+
 <!------------End-main--------------->
+</div>
 <?php require_once __DIR__ . DIRECTORY_SEPARATOR . '../common/footer.php'; ?>

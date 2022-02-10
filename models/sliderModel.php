@@ -3,6 +3,7 @@
 class sliderModel extends database
 {
 
+
     function addSlider()
     {
 //        یک نام جدید رندوم درست میکنیم و در پوشه img  مان ذخیره میکنیم .
