@@ -14,11 +14,13 @@ class aparatchi extends controller
 //        $listSubMenuShow=$categorymodel->listSubMenuShow();
 
         //ویومان را فراخوانی میکنیم
-        $this->loadView('user/aparatchi/aparatchi_index', array('title' => '.: APARATCHI | آپاراتچی :.',
-            'listMenuShow' => $listMenuShow,'listSubMenuShow'=>$categorymodel,'pics' => $sliderModel->listSlider()
-        ,'showpost' => $postModel->showPostForShowInSite()
+        $this->loadView('user/aparatchi/aparatchi_index', array('title' => '.: APARATCHI | آپاراتچی :.'
+        , 'listMenuShow' => $listMenuShow
+        ,'listSubMenuShow'=>$categorymodel
+        ,'pics' => $sliderModel->listSlider()
         ,'lastPost' => $postModel->showLastPost()
 
+        ,'showpost' => $postModel->showPostForShowInSite()
         ));
     }
 

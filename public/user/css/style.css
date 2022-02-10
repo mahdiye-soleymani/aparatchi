@@ -1801,10 +1801,6 @@ label.BYekan-sm:nth-child(3){
  }
  /**********************  **************************/
 .more{
-	width: 1180px;
-	height: 300px;
-	float: right;
-	overflow: hidden;
 	margin: 0px 10px 15px 10px;
 	/*background-color: yellow;*/
 	border-top: 2px solid #eee;
@@ -2214,7 +2210,6 @@ font-family: 'BRoya';
 	width: 90%;
 	height: 210px;
 	margin: 0px 60px;
-	/*background-color: yellow;*/
 	border-bottom: 1px solid #e1e1e1;
 }
 .ask > textarea{

@@ -14,9 +14,10 @@ class postModel extends database
                 move_uploaded_file($tmp_pic, 'public/admin/img/post/' . $newName);
                 $result = $this->connect->prepare('INSERT INTO tbl_post SET title=?,pic=?,content=?,writer=?');
                 $result->bindValue(1, $_POST['titlePost']);
-                $result->bindValue(2, $_POST['content']);
-                $result->bindValue(3, $newName);
+                $result->bindValue(2, $newName);
+                $result->bindValue(3, $_POST['content']);
                 $result->bindValue(4,'mahdiye');
+
                 $result->execute();
             }
         }
@@ -47,13 +48,13 @@ class postModel extends database
         }
     }
 
-    function showPostForEdameMatlab($id)
+    function showPostInfo($id)
     {
-        $result = $this->connect->prepare('SELECT * FROM tbl_post WHERE id=?');
+        $result = $this->connect->prepare('SELECT * FROM `tbl_post` WHERE `id`=?');
         $result->bindValue(1, $id);
         $result->execute();
         if ($result->rowCount() >= 1) {
-            $row = $result->fetch(PDO::FETCH_ASSOC);
+            $row = $result->fetch(PDO::FETCH_OBJ);
             return $row;
         } else {
             return false;

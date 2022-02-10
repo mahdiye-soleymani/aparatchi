@@ -32,6 +32,7 @@
                                                     <input type="text" class="form-control" name="titlePost"  autocomplete="off" style="color: #222222!important;"
                                                            placeholder="عنوان پست را وارد نمایید">
                                                 </div>
+
                                                 <div class="form-group">
                         <textarea class="form-control  ckeditor" name="content">
 
