@@ -20,7 +20,7 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">لیست دسته بندی ها </h3>
+                                <h3 class="card-title">منو های موجود </h3>
 
                                 <div class="card-tools">
 
@@ -31,29 +31,30 @@
                                 <thead>
                                 <tr class="success">
                                     <th class="text-center">id</th>
-                                    <th class="text-center"> نام دسته بندی به فارسی</th>
-                                    <th class="text-center">نام دسته بندی به لاتین</th>
-                                    <th class="text-center">حذف دسته بندی</th>
+                                    <th class="text-center">عنوان</th>
+                                    <th class="text-center">id منو اصلی</th>
+                                    <th class="text-center">منو اصلی|زیر منو</th>
                                 </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="text-center">
                                 <?php
-                                if (!empty($list)) {
-                                    foreach ($list as $value) {
-                                        ?>
+                                if (!empty($aparatchi['categorymodel']->listMenu())) {
+                                    foreach ($aparatchi['categorymodel']->listMenu() as $value) { ?>
                                         <tr>
-                                            <td class="text-center"><?php echo $value['id']; ?></td>
-                                            <td class="text-center"> <?php echo $value['name']; ?></td>
-                                            <td class="text-center"><?php echo $value['slug'] ?></td>
-                                            <td class="text-center"><a
-                                                        href="<?php echo 'dashbord.php?deleteCategory=' . $value['id'] ?>">حذف</a></td>
+                                            <td><?php echo $value->id; ?></td>
+                                            <td><?php echo $value->title; ?></td>
+                                            <td><?php echo $value->menuid; ?></td>
+                                            <td><?php echo $value->status; ?></td>
+                                            <td><a href="<?php echo AddressMyWebsite . 'update/memberEdit/'. $value->id; ?>"
+                                                   class="badge badge-info text-white">ویرایش</a> | <a
+                                                        href="<?php echo AddressMyWebsite . 'admindelete/deletemember/' . $value->id; ?>"
+                                                        class="badge badge-danger text-white">حذف</a></td>
                                         </tr>
                                     <?php }
                                 } else {
-                                    echo '<div class="alert alert-danger" style="margin: 5px;">';
-                                    echo 'دسته بندی وجود ندارد';
-                                    echo '</div>';
+                                    echo '<div class="alert alert-warning" style="margin: 15px 10px">موضوعی وجود ندارد</div>';
                                 } ?>
+
                                 </tbody>
 
                             </table>

@@ -61,7 +61,17 @@ class categorymodel extends database
         }
     }
 
-
+    function listMenu()
+    {
+// نمایش منو های اصلی در سایت
+        $result = $this->connect->prepare("SELECT * FROM `tbl_menu`");
+        $result->execute();
+        if($result->rowCount()>=1){
+            return $result->fetchAll(PDO::FETCH_OBJ);
+        }else{
+            return false;
+        }
+    }
 
 //    function deleteCategory($id)
 //    {

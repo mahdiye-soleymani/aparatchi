@@ -12,7 +12,7 @@ class register extends controller
         $message_success_register = null;
         $member_model = $this->loadModel('memberModel');  // فراخوانی مدل مربوط به کاربران از طریق متد والد
         if (isset($_POST['submit_register'])) {  // اگر روی دکمه کلیک شد
-            if ($_SERVER['HTTP_PEFRER'] == 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) {
+
                 if (!empty($_POST['username_register']) && !empty($_POST['email_register']) && !empty($_POST['password_register']) && !empty($_POST['info_register'])
                     && !empty($_POST['againpassword_register'])
                 ) {
@@ -53,7 +53,7 @@ class register extends controller
                     $message_error_register = 'لطفا اطلاعات خواسته شده را وارد نمایید';
                 }
             }
-        }
+
         $this->loadView('user/register/register_index', array('title' => 'ثبت نام در سایت',
             'error' => $message_error_register,
             'success' => $message_success_register

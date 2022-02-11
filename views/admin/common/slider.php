@@ -68,13 +68,13 @@ if (!isset($_SESSION['wellcom_to_adminindex'])) {
                             <li class="nav-item">
                                 <a href="<?php echo AddressMyWebsite; ?>addCategory" class="nav-link active">
                                     <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>افزودن دسته بندی</p>
+                                    <p>افزودن موضوع به منو</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="<?php echo AddressMyWebsite; ?>listCategory" class="nav-link active">
                                     <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>لیست دسته بندی</p>
+                                    <p>لیست موضوعات منو</p>
                                 </a>
                             </li>
                         </ul>
