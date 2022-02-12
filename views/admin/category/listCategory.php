@@ -33,7 +33,8 @@
                                     <th class="text-center">id</th>
                                     <th class="text-center">عنوان</th>
                                     <th class="text-center">id منو اصلی</th>
-                                    <th class="text-center">منو اصلی|زیر منو</th>
+                                    <th class="text-center">نوع منو</th>
+                                    <th class="text-center">حذف</th>
                                 </tr>
                                 </thead>
                                 <tbody class="text-center">

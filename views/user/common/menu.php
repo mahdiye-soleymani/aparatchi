@@ -17,7 +17,7 @@
                     </a>
                     <ul>
                         <?php foreach ($aparatchi['listSubMenuShow']->listSubMenuShow($value['id']) as $value2){?>
-                        <li><a href="#">
+                        <li><a href="<?php echo AddressMyWebsite . $value2['link']?>">
                                 <?php echo $value2['title'];?>
                             </a></li>
                         <?php }?>
