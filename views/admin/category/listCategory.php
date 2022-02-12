@@ -63,8 +63,7 @@
                                                 ?>
                                             </td>
                                             <td>
-                                                <a href="<?php echo AddressMyWebsite . 'update/memberEdit/' . $value->id; ?>"
-                                                   class="badge badge-info text-white">ویرایش</a> | <a
+                                                 <a
                                                         href="<?php
                                                         echo AddressMyWebsite . 'deleteMenu/deletemenu/' . $value->id;
                                                         ?>"
