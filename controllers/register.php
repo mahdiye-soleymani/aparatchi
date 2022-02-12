@@ -17,41 +17,48 @@ class register extends controller
                 && !empty($_POST['password_register']) && !empty($_POST['info_register'])
                 && !empty($_POST['againpassword_register'])
             ) {
-                // خالی نباشد
-                if ($member_model->checkemail($_POST['email_register'])) { // بررسی اینکه کاربری با این ایمیل موجود هست یا ن
+                if (ctype_alnum($_POST['username_register'])
+                    && ctype_alnum($_POST['password_register']) &&ctype_alnum($_POST['info_register'])
+                    && ctype_alnum($_POST['againpassword_register'])) {
+                    // خالی نباشد
+                    if ($member_model->checkemail($_POST['email_register'])) { // بررسی اینکه کاربری با این ایمیل موجود هست یا ن
 
-                    $message_error_register = 'کاربری با این ایمیل در وبسایت ثبت نام کرده است';
-                } else {
-                    //  ایمیل وارد شده در درون دیتابیس نیست
-                    if ($_POST['password_register'] >=3){
-                        if ($_POST['password_register'] == $_POST['againpassword_register']) {
+                        $message_error_register = 'کاربری با این ایمیل در وبسایت ثبت نام کرده است';
+                    } else {
+                        //  ایمیل وارد شده در درون دیتابیس نیست
+                        if ($_POST['password_register'] >= 3) {
 
-                            if ($_POST['captchacode'] == $_SESSION['random_number']) {  //بررسی کدی توی سشن صفحه کپچا  با مقداری که کاربر وارد کرده
 
-                                $emailregister = trim_url(security($_POST['email_register'])); // گرفتن ایمیل و قرار دادن درون یک متغیر
-                                $usernameregister = trim_url(security($_POST['username_register'])); // گرفتن یوزر نیم و قرار دادن درون یک متغیر
-                                $passwordregister = trim_url(hashpassword($_POST['password_register'])); // گرفتن پسورد و قرار دادن درون یک متغیر
-                                $inforegister = trim_url(security($_POST['info_register']));
-                                if ($member_model->register($inforegister, $usernameregister, $emailregister, $passwordregister)) {
-                                    // اینجا یعنی کاربر با موفقیت توانست در وبسایت ما ثبت نام کند
-                                    $message_success_register = 'ثبت نام با موفقیت انجام شد';
+                            if ($_POST['password_register'] == $_POST['againpassword_register']) {
+
+                                if ($_POST['captchacode'] == $_SESSION['random_number']) {  //بررسی کدی توی سشن صفحه کپچا  با مقداری که کاربر وارد کرده
+
+                                    $emailregister = trim_url(security($_POST['email_register'])); // گرفتن ایمیل و قرار دادن درون یک متغیر
+                                    $usernameregister = trim_url(security($_POST['username_register'])); // گرفتن یوزر نیم و قرار دادن درون یک متغیر
+                                    $passwordregister = trim_url(hashpassword($_POST['password_register'])); // گرفتن پسورد و قرار دادن درون یک متغیر
+                                    $inforegister = trim_url(security($_POST['info_register']));
+                                    if ($member_model->register($inforegister, $usernameregister, $emailregister, $passwordregister)) {
+                                        // اینجا یعنی کاربر با موفقیت توانست در وبسایت ما ثبت نام کند
+                                        $message_success_register = 'ثبت نام با موفقیت انجام شد';
+                                    } else {
+                                        $message_error_register = 'ثبت نام دچار مشکل شد لطفا مجدد اقدام نمایید';
+                                    }
+
+
                                 } else {
-                                    $message_error_register = 'ثبت نام دچار مشکل شد لطفا مجدد اقدام نمایید';
+                                    $message_error_register = 'کد امنیتی به درستی وارد نشده است';
                                 }
 
-
                             } else {
-                                $message_error_register = 'کد امنیتی به درستی وارد نشده است';
+                                $message_error_register = 'رمز عبور با تکرار رمز عبور یکسان نمیباشد';
                             }
-
                         } else {
-                            $message_error_register = 'رمز عبور با تکرار رمز عبور یکسان نمیباشد';
+                            $message_error_register = 'طول پسوورد باید بیشتر از 4 باشد.';
                         }
-                    }else{
-                        $message_error_register = 'طول پسوورد باید بیشتر از 4 باشد.';
                     }
+                } else {
+                    $message_error_register = 'فقط عدد و حروف وارد کنید بدون فاصله.';
                 }
-
             } else {
                 $message_error_register = 'لطفا اطلاعات خواسته شده را وارد نمایید';
             }

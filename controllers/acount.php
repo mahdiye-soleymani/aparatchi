@@ -10,7 +10,7 @@ class acount extends controller
 
         $accountModel = $this->loadModel('accountModel');
 
-        $this->loadView('user/acount/acount_index', array('title' => '.:aparatchi|آپاراتچی:.'
+        $this->loadView('user/acount/acount_index', array('title' => '.:aparatchi|پنل کاربری:.'
         , 'showAccount' => $accountModel->showAccount($Email)
         , 'listMenuShow' => $listMenuShow
         , 'listSubMenuShow' => $categorymodel

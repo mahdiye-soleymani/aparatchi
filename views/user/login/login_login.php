@@ -12,7 +12,7 @@
             <div>
 
                 <label class="BYekan-sm">ایمیل</label>
-                <input class="BYekan-sm" type="email" name="email_loginsite" placeholder="ایمیل خود را وارد کنید" value="<?php if(isset($_COOKIE['EmailCookie'])) echo $_COOKIE['EmailCookie'];?>">
+                <input class="BYekan-sm" type="email" autocomplete="off" name="email_loginsite" placeholder="ایمیل خود را وارد کنید" value="<?php if(isset($_COOKIE['EmailCookie'])) echo $_COOKIE['EmailCookie'];?>">
             </div>
             <div>
                 <label class="BYekan-sm">رمز عبور</label>
