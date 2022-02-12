@@ -339,7 +339,7 @@ input{
 /*********************new start***********************/
 #news{
 	width: 285px;
-	height: 450px;
+	height: auto;
 	margin-bottom: 10px;
 	background-color: #f8cf7d;
 }
@@ -396,7 +396,7 @@ input{
 /**********************start brand_site ********************/
 #brand_site{
 	width: 285px;
-	height: 391px;
+	height: auto;
 	margin-bottom: 10px;
 	background-color: #fff;
 }

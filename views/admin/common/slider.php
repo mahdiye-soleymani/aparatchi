@@ -125,6 +125,29 @@ if (!isset($_SESSION['wellcom_to_adminindex'])) {
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link ">
+                            <i class="nav-icon fa fa-dashboard"></i>
+                            <p>
+                                مدیریت اخبار
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="<?php echo AddressMyWebsite; ?>addNews" class="nav-link active">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>افزودن اخبار</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo AddressMyWebsite; ?>listNews" class="nav-link active">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>لیست اخبار</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="nav-item has-treeview ">
                         <a href="#" class="nav-link ">
                             <i class="nav-icon fa fa-dashboard"></i>

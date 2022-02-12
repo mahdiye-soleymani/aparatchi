@@ -8,6 +8,7 @@ class aparatchi extends controller
     public function indexAction()
     {
         $postModel = $this->loadModel('postModel');
+        $newsModel = $this->loadModel('newsModel');
         $sliderModel = $this->loadModel('sliderModel');
         $categorymodel = $this->loadModel('categorymodel');
         $listMenuShow = $categorymodel->listMenuShow();
@@ -19,6 +20,7 @@ class aparatchi extends controller
         ,'listSubMenuShow'=>$categorymodel
         ,'pics' => $sliderModel->listSlider()
         ,'lastPost' => $postModel->showLastPost()
+        ,'showNews'=> $newsModel->showLastNews()
 
         ,'showpost' => $postModel->showPostForShowInSite()
         ));

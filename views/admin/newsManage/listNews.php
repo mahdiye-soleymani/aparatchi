@@ -38,22 +38,22 @@
                                         <th>عملیات</th>
                                     </tr>
                                     <?php
-                                    if (!empty($aparatchi['listPostModel']->listPost())) {
-                                        foreach ($aparatchi['listPostModel']->listPost() as $value) { ?>
+                                    if (!empty($aparatchi['listNewsModel']->listNews())) {
+                                        foreach ($aparatchi['listNewsModel']->listNews() as $value) { ?>
                                             <tr>
 
                                                 <td><?php echo $value->id; ?></td>
                                                 <td><?php echo $value->title; ?></td>
                                                 <td><?php echo $value->writer; ?></td>
                                                 <td><?php echo $value->time; ?></td>
-                                                <td><a href="<?php echo AddressMyWebsite . 'postEdit/postsEdit/'. $value->id; ?>"
+                                                <td><a href="<?php echo AddressMyWebsite . 'newsEdit/newssEdit/'. $value->id; ?>"
                                                        class="badge badge-info text-white">ویرایش</a> | <a
-                                                        href="<?php echo AddressMyWebsite . 'postDelete/deletePost/' . $value->id; ?>"
+                                                        href="<?php echo AddressMyWebsite . 'newsDelete/deleteNews/' . $value->id; ?>"
                                                         class="badge badge-danger text-white">حذف</a></td>
                                             </tr>
                                         <?php }
                                     } else {
-                                        echo '<div class="alert alert-warning" style="margin: 15px 10px">پستی موجود نیست.</div>';
+                                        echo '<div class="alert alert-warning" style="margin: 15px 10px">اخباری موجود نیست.</div>';
                                     } ?>
                                     </tbody>
                                 </table>
