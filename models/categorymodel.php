@@ -73,19 +73,18 @@ class categorymodel extends database
         }
     }
 
-//    function deleteCategory($id)
-//    {
-//        global $database;
-//        $result = $database->prepare('DELETE FROM category_tbl WHERE id =?');
-//        $result->bindValue(1, $id);
-//        $result->execute();
-//        if ($result->rowCount() >= 1) {
-//            return $result;
-//        } else {
-//            return false;
-//        }
-//
-//    }
+    function deleteCategory($id)
+    {
+        $result = $this->connect->prepare("DELETE FROM tbl_menu WHERE id =?");
+        $result->bindValue(1, $id);
+        $result->execute();
+        if ($result->rowCount() >= 1) {
+            return $result;
+        } else {
+            return false;
+        }
+
+    }
 
 
 }

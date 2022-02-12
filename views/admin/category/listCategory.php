@@ -43,11 +43,31 @@
                                         <tr>
                                             <td><?php echo $value->id; ?></td>
                                             <td><?php echo $value->title; ?></td>
-                                            <td><?php echo $value->menuid; ?></td>
-                                            <td><?php echo $value->status; ?></td>
-                                            <td><a href="<?php echo AddressMyWebsite . 'update/memberEdit/'. $value->id; ?>"
+                                            <td><?php
+                                                if (($value->menuid) == 0) {
+                                                    echo "منو اصلی";
+                                                } elseif (($value->menuid) != 0) {
+                                                    echo $value->menuid;
+
+                                                }
+                                                ?>
+                                            </td>
+                                            <td><?php
+                                                if (($value->status) == 1) {
+                                                    echo "منو اصلی";
+                                                } elseif (($value->status) == 100) {
+                                                    echo "زیر منو ";
+                                                }elseif (($value->status) == 0) {
+                                                    echo "بدون زیرمنو";
+                                                }
+                                                ?>
+                                            </td>
+                                            <td>
+                                                <a href="<?php echo AddressMyWebsite . 'update/memberEdit/' . $value->id; ?>"
                                                    class="badge badge-info text-white">ویرایش</a> | <a
-                                                        href="<?php echo AddressMyWebsite . 'admindelete/deletemember/' . $value->id; ?>"
+                                                        href="<?php
+                                                        echo AddressMyWebsite . 'deleteMenu/deletemenu/' . $value->id;
+                                                        ?>"
                                                         class="badge badge-danger text-white">حذف</a></td>
                                         </tr>
                                     <?php }

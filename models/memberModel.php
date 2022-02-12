@@ -17,6 +17,18 @@ class memberModel extends database
 
     }
 
+    public function gettitle($id)
+    {
+
+        $result = $this->connect->prepare('SELECT `title` FROM `tbl_menu` WHERE `menuid`=?');
+        $result->bindValue(1, $id);
+        $result->execute();
+        if ($result->rowCount() == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public function checkemail($email)
     {
