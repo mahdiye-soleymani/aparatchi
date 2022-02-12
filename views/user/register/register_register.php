@@ -16,7 +16,7 @@
             </div>
             <div>
                 <label class="BYekan-sm">ایمیل خود را وارد کنید *</label>
-                <input class="BYekan-sm" autocomplete="off"  type="text" name="email_register" placeholder="لطفا یک ایمیل معتبر وارد کنید">
+                <input class="BYekan-sm" autocomplete="off"  type="email" name="email_register" placeholder="لطفا یک ایمیل معتبر وارد کنید">
             </div>
             <div>
                 <label class="BYekan-sm">رمز عبور *</label>

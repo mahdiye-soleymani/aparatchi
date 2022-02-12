@@ -6,89 +6,41 @@
         <table cellspacing="0">
             <tr>
                 <td>
-                    <span class="title_acount">نام  و خانوادگی:</span>
-                    <span>مهدیه</span>
+                    <span class="title_acount">
+                        نام  و خانوادگی:
+
+                    </span>
+                    <span id="info"> <?php
+                        echo $aparatchi['showAccount']->info;
+                        ?></span>
                 </td>
                 <td>
                     <span class="title_acount">آدرس ایمیل :</span>
-                    <span></span>
+                    <span id="email"> <?php
+                        echo $aparatchi['showAccount']->email;
+                        ?></span>
                 </td>
                 <td>
-                    <span class="title_acount">شماره موبایل :</span>
-                    <span></span>
+                    <span id="username" class="title_acount">نام کاربری :</span>
+                    <span> <?php
+                        echo $aparatchi['showAccount']->username;
+                        ?></span>
+                </td>
+                <td>
+                    <span id="pass" class="title_acount">پسوورد :</span>
+
+                    <span> <?php
+                        echo $aparatchi['showAccount']->password;
+                        ?></span>
                 </td>
             </tr>
 
 
         </table>
-        <a href="#">
+        <a href="<?php echo AddressMyWebsite . 'editUser/memberEdit/' . $_SESSION['emailmember'] ?>">
             <input type="submit" name="submit_edit" value="ویرایش اطلاعات کاربری">
         </a>
     </div>
 
-    <div class="tabletwo">
-        <div class="tab_header_Acount">
-            <ul>
-                <li class="tab_more_hover_li">پست مورد علاقه</li>
-                <li>نظرات من</li>
-                <li>نقدهای من</li>
-            </ul>
-        </div>
-        <div class="child_tab">
 
-
-            <section >
-                <table>
-                    <tr>
-                        <th>عنوان پست</th>
-                        <th>عملیات</th>
-                    </tr>
-                    <tr>
-
-                        <td><li>بتمن آغاز میکند</li></td>
-                        <td>
-                            <li>
-                                <a href="#">حذف </a>
-                            </li>
-                        </td>
-                    </tr>
-
-                </table>
-            </section>
-            <section>
-                <table>
-                    <tr>
-                        <th>متن</th>
-                        <th>می پسندم</th>
-                        <th>وضعیت</th>
-                        <th>عملیات</th>
-                    </tr>
-                    <tr>
-                        <td>ممنون از نقد</td>
-                        <td>1</td>
-                        <td>عدم تایید</td>
-                        <td>حذف|ویرایش</td>
-                    </tr>
-                </table>
-            </section>
-            <section>
-                <table>
-                    <tr>
-                        <th>عنوان</th>
-                        <th>می پسندم</th>
-                        <th>وضعیت</th>
-                        <th>عملیات</th>
-                    </tr>
-                    <tr>
-                        <td>فصل آخر پیکی بلایندرز</td>
-                        <td>71</td>
-                        <td>فعال</td>
-                        <td>حذف|ویرایش</td>
-                    </tr>
-                </table>
-            </section>
-
-
-        </div>
-    </div>
 </div>

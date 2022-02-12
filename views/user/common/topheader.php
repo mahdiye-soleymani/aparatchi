@@ -13,9 +13,12 @@
         <div id="header_row_top_right" class="BYekan-sm">
             <div id="header_row_top">
                 <?php if (isset($_SESSION['emailmember'])) { ?>
-                    <a style="font-size: 15px;color: #00a65a"> کاربر گرامی به وبسایت خوش امدید</a>
-
-                    <a href="<?php echo AddressMyWebsite.'exitsite'?>" style="color: #721c24;font-size: 15px;margin-right: 10px;border:solid 2px;padding: 3px ">خروج از وبسایت</a>
+                    <a href="<?php echo AddressMyWebsite . 'acount/accEdit/' . $_SESSION['emailmember'] ?>"
+                       style="color:#fc910a;font-size: 15px;margin-right: 10px;border:solid 2px;padding: 3px ">پنل
+                        کاربری</a>
+                    <a href="<?php echo AddressMyWebsite . 'exitsite' ?>"
+                       style="color: #fc910a;font-size: 15px;margin-right: 10px;border:solid 2px;padding: 3px ">خروج از
+                        وبسایت</a>
                 <?php } else { ?>
                     <span class="bg_span_login style_span_header_top"></span>
                     <a href="<?php echo AddressMyWebsite . 'login' ?>"> وارد شوید</a>

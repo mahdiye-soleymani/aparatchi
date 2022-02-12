@@ -66,6 +66,7 @@ class memberModel extends database
             return false;
         }
     }
+
     public function deletememberlog($id)
     {
         $result = $this->connect->prepare('DELETE FROM `tbl_logusers` WHERE `id`=?');
@@ -76,10 +77,11 @@ class memberModel extends database
             return false;
         }
     }
+
     public function listmemberwithid($id)
     {
         $result = $this->connect->prepare('SELECT * FROM `tbl_users` WHERE `id`=?');
-        $result->bindValue(1,$id);
+        $result->bindValue(1, $id);
         $result->execute();
         if ($result->rowCount() == 1) {
             // اطلاعات رو واکشی کن درصورتی که یک سطر یا بیشتر از یک سطر بتواند پیدا کند
@@ -90,14 +92,14 @@ class memberModel extends database
     }
 
 
-    public function updatemember($info, $username, $email, $banmember,$id)
+    public function updatemember($info, $username, $email, $banmember, $id)
     {
         $result = $this->connect->prepare('UPDATE `tbl_users` SET `info`=?,`username`=?,`email`=?,`status`=? WHERE `id`=?');
         $result->bindValue(1, $info);
         $result->bindValue(2, $username);
         $result->bindValue(3, $email);
         $result->bindValue(4, $banmember);
-        $result->bindValue(5,$id);
+        $result->bindValue(5, $id);
         if ($result->execute()) {
             return true;
         } else {
@@ -105,9 +107,10 @@ class memberModel extends database
         }
     }
 
-    public function logintosite($email,$password){
+    public function logintosite($email, $password)
+    {
         $result = $this->connect->prepare('SELECT * FROM `tbl_users` WHERE `email`=? AND `password`=?');
-        $result->bindValue(1,$email);
+        $result->bindValue(1, $email);
         $result->bindValue(2, hashpassword($password));
         $result->execute();
         //چون ایمیل مان باید یونیک باشد
@@ -118,11 +121,11 @@ class memberModel extends database
                 setcookie('PasswordCookie', $password, time() + 86400);
             } else {
 
-                if(isset($_COOKIE['EmailCookie'])){
-                    setcookie('EmailCookie','');
+                if (isset($_COOKIE['EmailCookie'])) {
+                    setcookie('EmailCookie', '');
                 }
-                if(isset($_COOKIE['PasswordCookie'])){
-                    setcookie('PasswordCookie','');
+                if (isset($_COOKIE['PasswordCookie'])) {
+                    setcookie('PasswordCookie', '');
                 }
                 /* زمانی که تیک را نزده ایم*/
             }
@@ -136,7 +139,7 @@ class memberModel extends database
     public function checkbanmember($email)
     {
         $result = $this->connect->prepare('SELECT * FROM `tbl_users` WHERE `email`=?');
-        $result->bindValue(1,$email);
+        $result->bindValue(1, $email);
         $result->execute();
         if ($result->rowCount() == 1) {
             //چون فقط یدونس

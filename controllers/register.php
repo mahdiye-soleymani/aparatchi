@@ -13,16 +13,17 @@ class register extends controller
         $member_model = $this->loadModel('memberModel');  // فراخوانی مدل مربوط به کاربران از طریق متد والد
         if (isset($_POST['submit_register'])) {  // اگر روی دکمه کلیک شد
 
-                if (!empty($_POST['username_register']) && !empty($_POST['email_register']) && !empty($_POST['password_register']) && !empty($_POST['info_register'])
-                    && !empty($_POST['againpassword_register'])
-                ) {
-                    // خالی نباشد
-                    if ($member_model->checkemail($_POST['email_register'])) { // بررسی اینکه کاربری با این ایمیل موجود هست یا ن
+            if (!empty($_POST['username_register']) && !empty($_POST['email_register'])
+                && !empty($_POST['password_register']) && !empty($_POST['info_register'])
+                && !empty($_POST['againpassword_register'])
+            ) {
+                // خالی نباشد
+                if ($member_model->checkemail($_POST['email_register'])) { // بررسی اینکه کاربری با این ایمیل موجود هست یا ن
 
-                        $message_error_register = 'کاربری با این ایمیل در وبسایت ثبت نام کرده است';
-                    } else {
-                        //  ایمیل وارد شده در درون دیتابیس نیست
-
+                    $message_error_register = 'کاربری با این ایمیل در وبسایت ثبت نام کرده است';
+                } else {
+                    //  ایمیل وارد شده در درون دیتابیس نیست
+                    if ($_POST['password_register'] >=3){
                         if ($_POST['password_register'] == $_POST['againpassword_register']) {
 
                             if ($_POST['captchacode'] == $_SESSION['random_number']) {  //بررسی کدی توی سشن صفحه کپچا  با مقداری که کاربر وارد کرده
@@ -46,18 +47,20 @@ class register extends controller
                         } else {
                             $message_error_register = 'رمز عبور با تکرار رمز عبور یکسان نمیباشد';
                         }
-
+                    }else{
+                        $message_error_register = 'طول پسوورد باید بیشتر از 4 باشد.';
                     }
-
-                } else {
-                    $message_error_register = 'لطفا اطلاعات خواسته شده را وارد نمایید';
                 }
+
+            } else {
+                $message_error_register = 'لطفا اطلاعات خواسته شده را وارد نمایید';
             }
+        }
 
         $this->loadView('user/register/register_index', array('title' => 'ثبت نام در سایت',
             'error' => $message_error_register,
             'success' => $message_success_register
-        , 'listMenuShow' => $listMenuShow,'listSubMenuShow'=>$categorymodel
+        , 'listMenuShow' => $listMenuShow, 'listSubMenuShow' => $categorymodel
         ));
     }
 }

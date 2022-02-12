@@ -17,13 +17,13 @@
 
                 <form action="" method="post">
                     <div class="input-group mb-3">
-                        <input type="email" name="emailloginadmin" class="form-control" placeholder="ایمیل">
+                        <input type="email" name="emailloginadmin" autocomplete="false" class="form-control" placeholder="ایمیل" value="<?php if(isset($_COOKIE['EmailCookiea'])) echo $_COOKIE['EmailCookiea'];?>">
                         <div class="input-group-append">
                             <span class="fa fa-envelope input-group-text"></span>
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="passwordloginadmin" class="form-control"  placeholder="رمز عبور">
+                        <input type="password" name="passwordloginadmin" class="form-control"  placeholder="رمز عبور"value="">
                         <div class="input-group-append">
                             <span class="fa fa-lock input-group-text"></span>
                         </div>
@@ -32,7 +32,7 @@
                         <div class="col-8">
                             <div class="checkbox icheck">
                                 <label>
-                                    <input type="checkbox"> یاد آوری من
+                                    <input type="checkbox" name="rememberloginsite1" <?php if(isset($_COOKIE['PasswordCookiea'])) echo 'checked';?>> یاد آوری من
                                 </label>
                             </div>
                         </div>

@@ -20,6 +20,7 @@ class adminlogin extends controller
 
         }
 
-        $this->loadView('admin/login/loginindex',array('title' => '.:ورود به پنل مدیریت:.', 'message_error_loginadmin' => $message_error_loginadmin));
+        $this->loadView('admin/login/loginindex',array('title' => '.:ورود به پنل مدیریت:.'
+        , 'message_error_loginadmin' => $message_error_loginadmin));
     }
 }
