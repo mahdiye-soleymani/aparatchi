@@ -17,6 +17,8 @@
                 <div class="row justify-content-center">
                     <center>
                     <div class="col-sm-12">
+                        <?php echo '<p class="BYekan-sm" style="color:#721c24; ">' . $aparatchi['error'] . '</p>' ?>
+                        <?php echo '<p class="BYekan-sm" style="color:#00a65a; ">' . $aparatchi['success'] . '</p>' ?>
                         <div class="card card-dark ">
 
                             <div class="card-header">
