@@ -87,11 +87,11 @@ input{
 .bg_span_register{
 	background: url(../images/register.png) no-repeat;
 }
-#header_row_top > a{
-	float: right;
-	color: #868686;
-	margin:5px 10px 0px 30px;
-}
+/*#header_row_top > a{*/
+/*	float: right;*/
+/*	color: #868686;*/
+/*	margin:5px 10px 0px 30px;*/
+/*}*/
 #header_row_bottom{
 	width: 700px;
 	height: 40px;

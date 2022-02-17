@@ -60,4 +60,26 @@ class postModel extends database
             return false;
         }
     }
+    public function countpost()
+    {
+        $result = $this->connect->prepare('SELECT COUNT(id) AS `countpost` FROM `tbl_post` ');
+        $result->execute();
+        if ($result->rowCount() >= 1) {
+            return $result->fetchAll(PDO::FETCH_OBJ)[0]->countpost;
+        } else {
+            return false;
+        }
+    }
+    function search($title)
+    {
+        $result = $this->connect->prepare('SELECT * FROM tbl_post WHERE title LIKE ?');
+        $result->bindValue(1, "%$title%");
+        $result->execute();
+        if ($result->rowCount() >= 1) {
+            $row = $result->fetchAll(PDO::FETCH_ASSOC);
+            return $row;
+        } else {
+            return false;
+        }
+    }
 }

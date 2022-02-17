@@ -26,13 +26,18 @@
                     <a href="<?php echo AddressMyWebsite . 'register' ?>">ثبت نام کنید</a>
                 <?php } ?>
             </div>
-            <div id="header_row_bottom">
-                <div id="search_box">
-                    <input class="BYekan-sm" type="text" name="search_box"
-                           placeholder="فیلم مورد نظرتان را جستجو کنید....">
-                    <span></span>
+            <form class="" method="get" action="<?php echo AddressMyWebsite . 'search/search' ?>">
+                <div class="">
+                    <input name="search" type="text" autocomplete="off" class="form-control" style="width: 300px;height:30px;font-size: 20px;
+                    border-bottom-right-radius: 50px; border-top-right-radius: 50px;text-align: center " placeholder="نام پست را جهت جستجو وارد نمایید">
+
+                        <button  style="background-color: #fc530a;font-size: 20px;height:30px;color:white;
+                        border-bottom-left-radius: 50px; border-top-left-radius: 50px;width: 100px; cursor: pointer" type="submit">
+                            جستجو
+                        </button>
+
                 </div>
-            </div>
+            </form>
         </div><!----End header_row_top_right--->
 
     </div><!----End Main_header--->

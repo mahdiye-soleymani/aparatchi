@@ -60,4 +60,14 @@ class newsModel extends database
             return false;
         }
     }
+    public function newscount()
+    {
+        $result = $this->connect->prepare('SELECT COUNT(id) AS `newscount` FROM `tbl_news` ');
+        $result->execute();
+        if ($result->rowCount() >= 1) {
+            return $result->fetchAll(PDO::FETCH_OBJ)[0]->newscount;
+        } else {
+            return false;
+        }
+    }
 }

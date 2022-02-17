@@ -17,7 +17,7 @@
 
                 <form action="" method="post">
                     <div class="input-group mb-3">
-                        <input type="email" name="emailloginadmin" autocomplete="false" class="form-control" placeholder="ایمیل" value="<?php if(isset($_COOKIE['EmailCookiea'])) echo $_COOKIE['EmailCookiea'];?>">
+                        <input type="email" name="emailloginadmin" autocomplete="false" class="form-control" autocapitalize="off" placeholder="ایمیل" value="<?php if(isset($_COOKIE['EmailCookiea'])) echo $_COOKIE['EmailCookiea'];?>">
                         <div class="input-group-append">
                             <span class="fa fa-envelope input-group-text"></span>
                         </div>
