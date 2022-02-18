@@ -19,6 +19,8 @@
 </footer>
 <script src="<?php echo AddressMyWebsite; ?>/public/user/js/jquery.js"></script>
 <script src="<?php echo AddressMyWebsite; ?>/public/user/js/flipclock.js"></script>
-
+<!--delete if need-->
+<script src="<?php echo AddressMyWebsite; ?>/public/user/js/jquery.min.1.11.2.js"></script>
+<script src="<?php echo AddressMyWebsite; ?>/public/user/js/bootstrap.min.js"></script>
 </body>
 </html>
