@@ -9,7 +9,7 @@
 <!-----------start-main-------------->
 <div id="main">
     <div id="content" style="background-color: #fff;height:auto;width: 1200px;">
-        <div class="header_info">
+        <div class="header_info" >
             <div class="header_info_right">
                 <img src="<?php echo AddressMyWebsite . 'public/admin/img/post/' .$aparatchi['showPost']->pic ?>">
             </div>
@@ -36,6 +36,7 @@
                 </div>
 
             </div>
+        </div>
             <div class="more">
 
                 <?php
@@ -49,10 +50,12 @@
                     <li>نظرات کاربران</li>
                 </ul>
                 <div id="child_tab">
-                    <section>
-                        <div class="ask">
+                    <form method="post">
+                        <div class="ask" style="padding: 25px;">
                             <textarea></textarea></br>
-                            <a href="#">ارسال</a>
+                            <button type="submit" name="sendComment" class="btn btn-block btn-primary"
+                                    style="border-radius: 0!important;">ارسال
+                            </button>
                         </div>
                         <div class="ask_respnse">
                             <div class="ask_respnse_header">
@@ -66,10 +69,11 @@
                             </div>
                         </div>
 
-                    </section>
+                    </form>
+
                 </div>
             </div>
-        </div>
+
     </div>
 
     <!-----------End-content-------------->

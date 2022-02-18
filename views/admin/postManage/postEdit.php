@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <?php require_once __DIR__ . DIRECTORY_SEPARATOR . '../common/header.php'; ?>
 <div class="wrapper">
     <!-- Navbar -->
@@ -29,15 +35,15 @@
                                                 <form method="post" enctype="multipart/form-data">
                                                     <div class="form-group">
                                                         <input type="text" class="form-control"
-                                                               value="<?php echo $aparatchi['listNewsByid']->title; ?>"
-                                                               name="titleNews" autocomplete="off"
+                                                               value="<?php echo $aparatchi['listPostByid']->title; ?>"
+                                                               name="titlePost" autocomplete="off"
                                                                style="color: #222222!important;"
                                                         >
                                                     </div>
 
                                                     <div class="form-group">
                         <textarea class="form-control  ckeditor"  name="content">
-<?php echo $aparatchi['listNewsByid']->content;?>"
+<?php echo $aparatchi['listPostByid']->content;?>"
                         </textarea>
                                                     </div>
                                                     <div class="form-group">
@@ -52,7 +58,7 @@
                                                             </center>
                                                         </div>
                                                 </form>
-                                                <button type="submit" name="btnEditNews"
+                                                <button type="submit" name="btnEditPost"
                                                         class="btn btn-primary btn-block mb-4">ویرایش پست
                                                 </button>
                                             </div>

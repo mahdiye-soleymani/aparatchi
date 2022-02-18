@@ -50,7 +50,7 @@
                                                     </center>
                                                 </div>
                                             </form>
-                                            <button type="submit" name="btnNews" class="btn btn-primary btn-block mb-4">ارسال پست</button>
+                                            <button type="submit" name="btnNews" class="btn btn-primary btn-block mb-4">ارسال خبر</button>
                                         </div>
                                     </div>
                                 </div>
