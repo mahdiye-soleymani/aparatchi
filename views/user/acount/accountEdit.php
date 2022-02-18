@@ -17,15 +17,6 @@
                 <table cellspacing="0">
                     <tr>
                         <td>
-                    <span class="title_acount">
-                        نام  و خانوادگی:
-
-                    </span>
-                            <input type="text" name="info" value="<?php echo $aparatchi['showAccount']->info; ?>"
-                                   class="form-control" id="">
-
-                        </td>
-                        <td>
                             <span class="title_acount">آدرس ایمیل :</span>
                             <input type="text" name="email" readonly="readonly" value="<?php echo $aparatchi['showAccount']->email; ?>"
                         </td>

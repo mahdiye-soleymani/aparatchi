@@ -1,19 +1,12 @@
 <!--درستش کن-->
 <div class="Acount_info">
     <div class="tableone">
-        <h4>اطلاعات کاربر</h4>
-        <label>مشخصات کاربری</label>
+        <h4>مشخصات کاربری</h4>
+        <label style="background-color: #ffb922;color: black"> ثبتنام شده در : <?php
+            echo $aparatchi['showAccount']->register_time;
+            ?></label>
         <table cellspacing="0">
             <tr>
-                <td>
-                    <span class="title_acount">
-                        نام  و خانوادگی:
-
-                    </span>
-                    <span id="info"> <?php
-                        echo $aparatchi['showAccount']->info;
-                        ?></span>
-                </td>
                 <td>
                     <span class="title_acount">آدرس ایمیل :</span>
                     <span id="email"> <?php

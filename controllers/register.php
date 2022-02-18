@@ -14,11 +14,12 @@ class register extends controller
         if (isset($_POST['submit_register'])) {  // اگر روی دکمه کلیک شد
 
             if (!empty($_POST['username_register']) && !empty($_POST['email_register'])
-                && !empty($_POST['password_register']) && !empty($_POST['info_register'])
+                && !empty($_POST['password_register'])
                 && !empty($_POST['againpassword_register'])
             ) {
+//                فقط عدد و حرف بدون فاصله
                 if (ctype_alnum($_POST['username_register'])
-                    && ctype_alnum($_POST['password_register']) &&ctype_alnum($_POST['info_register'])
+                    && ctype_alnum($_POST['password_register'])
                     && ctype_alnum($_POST['againpassword_register'])) {
                     // خالی نباشد
                     if ($member_model->checkemail($_POST['email_register'])) { // بررسی اینکه کاربری با این ایمیل موجود هست یا ن
@@ -36,8 +37,8 @@ class register extends controller
                                     $emailregister = trim_url(security($_POST['email_register'])); // گرفتن ایمیل و قرار دادن درون یک متغیر
                                     $usernameregister = trim_url(security($_POST['username_register'])); // گرفتن یوزر نیم و قرار دادن درون یک متغیر
                                     $passwordregister = trim_url(hashpassword($_POST['password_register'])); // گرفتن پسورد و قرار دادن درون یک متغیر
-                                    $inforegister = trim_url(security($_POST['info_register']));
-                                    if ($member_model->register($inforegister, $usernameregister, $emailregister, $passwordregister)) {
+
+                                    if ($member_model->register($usernameregister, $emailregister, $passwordregister)) {
                                         // اینجا یعنی کاربر با موفقیت توانست در وبسایت ما ثبت نام کند
                                         $message_success_register = 'ثبت نام با موفقیت انجام شد';
                                     } else {

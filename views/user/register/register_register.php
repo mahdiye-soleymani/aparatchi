@@ -7,11 +7,6 @@
         <?php echo '<p class="BYekan-sm" style="color:#00a65a; ">' . $aparatchi['success'] . '</p>' ?>
         <form id="form_register" method="post" action="">
             <div>
-
-                <label class="BYekan-sm" >نام و نام خانوادگی</label>
-                <input class="BYekan-sm" autocomplete="off" type="text" name="info_register" placeholder="نام و نام خانوادگی خود را وارد کنید">
-            </div>
-            <div>
                 <label class="BYekan-sm">نام کاربری *</label>
                 <input class="BYekan-sm" autocomplete="off"  type="text" name="username_register" placeholder="نام کاربری خود را وارد کنید">
             </div>

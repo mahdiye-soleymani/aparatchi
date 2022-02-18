@@ -82,4 +82,16 @@ class postModel extends database
             return false;
         }
     }
+    public function checkTitle($title)
+    {
+
+        $result = $this->connect->prepare('SELECT `title` FROM `tbl_post` WHERE `title`=?');
+        $result->bindValue(1, $title);
+        $result->execute();
+        if ($result->rowCount() == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

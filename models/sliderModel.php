@@ -7,7 +7,6 @@ class sliderModel extends database
     function addSlider()
     {
 //        یک نام جدید رندوم درست میکنیم و در پوشه img  مان ذخیره میکنیم .
-        if (isset($_POST['btnPost'])) {
             if (isset($_POST['btnslider'])) {
                 $file = $_FILES['file_upload'];
                 $filename = $file['name'];
@@ -27,7 +26,7 @@ class sliderModel extends database
                 }
 
             }
-        }
+
     }
 
     function listSlider()

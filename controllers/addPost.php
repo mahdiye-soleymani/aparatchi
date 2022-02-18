@@ -9,9 +9,16 @@ class addPost extends controller
         $message_error_register = null;
         $message_success_register = null;
         if (isset($_POST['btnPost'])) {
+
             if (!empty($_POST['titlePost']) && !empty($_POST['content']) && !empty($_FILES['file_upload']['name'])) {
-                $postModel->addPost();
-                $message_success_register = 'پست جدید اضافه شد.';
+                if ($postModel->checkTitle($_POST['titlePost'])) {
+
+                    $message_error_register = 'پستی با این عنوان وجود دارد';
+                }else{
+                    $postModel->addPost();
+                    $message_success_register = 'پست جدید اضافه شد.';
+                }
+
 
             } else {
                 $message_error_register = 'لطفا اطلاعات خواسته شده را وارد نمایید';

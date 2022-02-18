@@ -2,13 +2,13 @@
 
 class memberModel extends database
 {
-    public function register($info, $username, $email, $password)
+    public function register($username, $email, $password)
     {
-        $result = $this->connect->prepare('INSERT INTO `tbl_users` SET `info`=?,`username`=?,`email`=?,`password`=?');
-        $result->bindValue(1, $info);
-        $result->bindValue(2, $username);
-        $result->bindValue(3, $email);
-        $result->bindValue(4, $password);
+        $result = $this->connect->prepare('INSERT INTO `tbl_users` SET `username`=?,`email`=?,`password`=?');
+
+        $result->bindValue(1, $username);
+        $result->bindValue(2, $email);
+        $result->bindValue(3, $password);
         if ($result->execute()) {
             return true;
         } else {
@@ -104,14 +104,13 @@ class memberModel extends database
     }
 
 
-    public function updatemember($info, $username, $email, $banmember, $id)
+    public function updatemember($username, $email, $banmember, $id)
     {
-        $result = $this->connect->prepare('UPDATE `tbl_users` SET `info`=?,`username`=?,`email`=?,`status`=? WHERE `id`=?');
-        $result->bindValue(1, $info);
-        $result->bindValue(2, $username);
-        $result->bindValue(3, $email);
-        $result->bindValue(4, $banmember);
-        $result->bindValue(5, $id);
+        $result = $this->connect->prepare('UPDATE `tbl_users` SET `username`=?,`email`=?,`status`=? WHERE `id`=?');
+        $result->bindValue(1, $username);
+        $result->bindValue(2, $email);
+        $result->bindValue(3, $banmember);
+        $result->bindValue(4, $id);
         if ($result->execute()) {
             return true;
         } else {

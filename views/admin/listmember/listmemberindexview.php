@@ -32,9 +32,9 @@
                                     <tbody>
                                     <tr>
                                         <th>شماره</th>
-                                        <th>نام و نام خانوادگی</th>
                                         <th>یوزر نیم</th>
                                         <th>ایمیل</th>
+                                        <th>زمان ثبت نام</th>
                                         <th>عملیات</th>
                                     </tr>
                                     <?php
@@ -43,9 +43,9 @@
                                             <tr>
 
                                                 <td><?php echo $value->id; ?></td>
-                                                <td><?php echo $value->info; ?></td>
                                                 <td><?php echo $value->username; ?></td>
                                                 <td><?php echo $value->email; ?></td>
+                                                <td><?php echo shamsi($value->register_time); ?></td>
                                                 <td><a href="<?php echo AddressMyWebsite . 'update/memberEdit/'. $value->id; ?>"
                                                        class="badge badge-info text-white">ویرایش</a> | <a
                                                             href="<?php echo AddressMyWebsite . 'admindelete/deletemember/' . $value->id; ?>"
