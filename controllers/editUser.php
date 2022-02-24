@@ -12,7 +12,7 @@ class editUser extends controller
         $accountModel = $this->loadModel('accountModel');
         if (isset($_POST['submitedit'])) {
 
-            $infoupdateregister = trim_url(security($_POST['info']));
+            $infoupdateregister = trim_url(security($_POST['email']));
 //            $emailupdateregister = trim_url(security($_POST['email']));
             $usernameupdateregister = trim_url(security($_POST['username']));
 //            $pass = trim_url(security($_POST['pass']));

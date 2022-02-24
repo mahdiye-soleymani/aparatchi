@@ -9,6 +9,7 @@ class proccess
     private $location;
     private $obj;
 
+//   سازنده
     public function __construct()
     {
         if (isset($_GET['aparatchi'])) {
@@ -41,7 +42,6 @@ class proccess
 
     public function explodeUrl($url)
     {
-        //در این متد ما یک ورودی میگیریم و ورودی رو بر حسب یک اسلش تکه تکه میکنیم و درواقع خروجی ارایه میباشد
         return explode('/', $url);
     }
 

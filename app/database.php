@@ -1,6 +1,6 @@
 <?php
 
-
+//اتصال به دیتابیس
 class database
 {
     protected $connect;

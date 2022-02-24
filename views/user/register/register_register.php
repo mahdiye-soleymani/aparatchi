@@ -1,13 +1,22 @@
-<div id="register">
-    <div class="register_header">
+<div id="register" ">
+<div style="background-color: #fff7ae">
+    <div class="BYekan-sm" style=" float: right;padding-right: 10px">
+        <p>نکات</p>
+        <hr>
+        <p>نام کاربری بدون فاصله و حروف انگلیسی باشد.</p>
+        <p>طول پسورد نمیتواند کم تر 4 کاراکتر باشد.</p>
+    </div>
+
+    <div class="register_header" >
         <img src="<?php echo AddressMyWebsite . 'public/user/'; ?>images/register_page.png">
     </div>
+</div>
     <div class="form_register">
         <?php echo '<p class="BYekan-sm" style="color:#721c24; ">' . $aparatchi['error'] . '</p>' ?>
         <?php echo '<p class="BYekan-sm" style="color:#00a65a; ">' . $aparatchi['success'] . '</p>' ?>
         <form id="form_register" method="post" action="">
             <div>
-                <label class="BYekan-sm">نام کاربری *</label>
+                <label class="BYekan-sm" >نام کاربری *</label>
                 <input class="BYekan-sm" autocomplete="off"  type="text" name="username_register" placeholder="نام کاربری خود را وارد کنید">
             </div>
             <div>

@@ -27,7 +27,7 @@
                                     <div class="col-sm-8 col-sm-offset-2"
                                          style="background-color: #fff!important;padding: 10px;">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="titleMenu"
+                                            <input type="text" autocomplete="off" class="form-control" name="titleMenu"
                                                    placeholder="عنوان منو را وارد نمایید">
                                         </div>
                                         <div class="form-group">
@@ -59,7 +59,7 @@
                                     <div class="col-sm-8 col-sm-offset-2"
                                          style="background-color: #fff!important;padding: 10px;">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="titleSubMenu"
+                                            <input type="text" class="form-control" autocomplete="off" name="titleSubMenu"
                                                    placeholder="عنوان زیر منو را وارد نمایید">
                                         </div>
                                         <div class="form-group">

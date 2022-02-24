@@ -3,4 +3,5 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 #چک میکند دایرکتوری وجود دارد
 RewriteCond %{REQUEST_FILENAME} !-d
+#هرچیزی جای یک قرار گرفت طبق شرط باشد(همه چیز و حداقل یک کاراکتر)
 RewriteRule ^(.+)$ index.php?aparatchi=$1 [QSA]

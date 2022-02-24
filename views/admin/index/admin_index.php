@@ -38,10 +38,10 @@
     <footer class="main-footer">
         <!-- To the right -->
         <div class="float-right d-none d-sm-inline">
-            Anything you want
+            <strong> &copy; 2021 <a href="#">مهدیه سلیمانی</a>.</strong>
         </div>
         <!-- Default to the left -->
-<!--        <strong>CopyLeft &copy; 2021 <a href="#">مهدیه سلیمانی</a>.</strong>-->
+<!--        -->
     </footer>
 </div>
 <?php require_once __DIR__ . DIRECTORY_SEPARATOR . '../common/footer.php'; ?>

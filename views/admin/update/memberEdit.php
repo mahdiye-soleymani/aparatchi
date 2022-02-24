@@ -26,17 +26,14 @@
                             <!-- form start -->
                             <form  role="form" method="post" action="">
                                 <div class="card-body">
-                                    <div class="form-group">
-                                        <p>نام و نام خانوادگی</p>
-                                        <input type="text" value="<?php echo $aparatchi['listmemberbyid']->info;?>" name="infoupdateregister" class="form-control" id="exampleInputEmail1">
-                                    </div>
+
                                     <div class="form-group">
                                         <p>ایمیل کاربر</p>
-                                        <input type="email" value="<?php echo $aparatchi['listmemberbyid']->email;?>" name="emailupdateregister" class="form-control" id="exampleInputEmail1">
+                                        <input type="email" readonly value="<?php echo $aparatchi['listmemberbyid']->email;?>" name="emailupdateregister" class="form-control" id="exampleInputEmail1">
                                     </div>
                                     <div class="form-group">
                                         <p>نام کاربری کاربر</p>
-                                        <input type="text" name="usernameupdateregister" value="<?php echo $aparatchi['listmemberbyid']->username;?>" class="form-control" id="exampleInputEmail1">
+                                        <input type="text"  readonly name="usernameupdateregister" value="<?php echo $aparatchi['listmemberbyid']->username;?>" class="form-control" id="exampleInputEmail1">
                                     </div>
 
                                     <div class="form-group">

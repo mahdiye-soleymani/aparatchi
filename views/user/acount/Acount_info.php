@@ -3,7 +3,7 @@
     <div class="tableone">
         <h4>مشخصات کاربری</h4>
         <label style="background-color: #ffb922;color: black"> ثبتنام شده در : <?php
-            echo $aparatchi['showAccount']->register_time;
+            echo shamsi($aparatchi['showAccount']->register_time);
             ?></label>
         <table cellspacing="0">
             <tr>

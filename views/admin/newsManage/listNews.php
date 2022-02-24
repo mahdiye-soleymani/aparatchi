@@ -45,8 +45,8 @@
                                                 <td><?php echo $value->id; ?></td>
                                                 <td><?php echo $value->title; ?></td>
                                                 <td><?php echo $value->writer; ?></td>
-                                                <td><?php echo $value->time; ?></td>
-                                                <td><a href="<?php echo AddressMyWebsite . 'newsEdit/newssEdit/'. $value->id; ?>"
+                                                <td><?php echo shamsi($value->time); ?></td>
+                                                <td><a href="<?php echo AddressMyWebsite . 'newsEdit/newsEdit/'. $value->id; ?>"
                                                        class="badge badge-info text-white">ویرایش</a> | <a
                                                         href="<?php echo AddressMyWebsite . 'newsDelete/deleteNews/' . $value->id; ?>"
                                                         class="badge badge-danger text-white">حذف</a></td>

@@ -25,7 +25,7 @@
                             <div class="card card-dark ">
 
                                 <div class="card-header">
-                                    <h3 class="card-title">پست جدید</h3>
+                                    <h3 class="card-title">ویرایش پست</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <form method="post" enctype="multipart/form-data" style="margin-top: 10px;">
@@ -43,7 +43,7 @@
 
                                                     <div class="form-group">
                         <textarea class="form-control  ckeditor"  name="content">
-<?php echo $aparatchi['listPostByid']->content;?>"
+<?php echo $aparatchi['listPostByid']->content;?>
                         </textarea>
                                                     </div>
                                                     <div class="form-group">
@@ -53,7 +53,7 @@
                                                             <center>
                      <span class="btn btn-danger btn-file"
                            style="margin: 5px 25px 14px 25px;border-radius: 0!important;">
-                         انتخاب عکس<input type="file" name="file_upload">
+                         انتخاب عکس<input type="file" name="file_upload"  value="<?php echo $aparatchi['listPostByid']->pic;?>">
                       </span>
                                                             </center>
                                                         </div>

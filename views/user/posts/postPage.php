@@ -29,7 +29,7 @@
                         </li>
                         <li> زمان ارسال :
                             <?php
-                            echo $aparatchi['showPost']->time;
+                            echo shamsi($aparatchi['showPost']->time);
                             ?>
                         </li>
                     </ul>
@@ -54,7 +54,7 @@
 
                     <?php
                     if (isset($_SESSION['pending']))
-                        echo '<p class="BYekan-sm" style="color:#00a65a;text-align: center ">' . 'نظر شما ارسال شد منتظر تایید ادمین بمانید' . '</p>'
+                        echo '<p class="BYekan-sm" style="color:#00a65a;text-align: center ">' . 'نظر شما ارسال شد منتظر تایید ادمین بمانید' . '</p>';
 
                     ?>
                     <form method="post"
@@ -68,19 +68,6 @@
                             </button>
                         </div>
 
-
-                        <div class="ask_respnse">
-                            <div class="ask_respnse_header">
-                                <div class="user_response">
-
-                                    <label class=""> </label>
-                                    <label class="">1397/5/10</label>
-                                </div>
-                            </div>
-                            <div class="ask_respnse_content">
-                                <p></p>
-                            </div>
-                        </div>
 
                     </form>
 
@@ -110,7 +97,7 @@
                             <div class="ask_respnse_header">
                                 <div class="user_response">
                                     <label class=""><?php echo $value->info ?></label>
-                                    <label class=""><?php echo $value->time ?></label>
+                                    <label class=""><?php echo shamsi($value->time) ?></label>
                                 </div>
                             </div>
                             <div class="ask_respnse_content">

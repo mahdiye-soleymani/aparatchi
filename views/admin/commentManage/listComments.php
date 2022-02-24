@@ -68,7 +68,7 @@
                                             </tr>
                                         <?php }
                                     } else {
-                                        echo '<div class="alert alert-warning" style="margin: 15px 10px">اخباری موجود نیست.</div>';
+                                        echo '<div class="alert alert-warning" style="margin: 15px 10px">کامنتی موجود نیست.</div>';
                                     } ?>
                                     </tbody>
                                 </table>

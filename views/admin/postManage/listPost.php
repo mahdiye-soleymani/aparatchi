@@ -45,7 +45,7 @@
                                                 <td><?php echo $value->id; ?></td>
                                                 <td><?php echo $value->title; ?></td>
                                                 <td><?php echo $value->writer; ?></td>
-                                                <td><?php echo $value->time; ?></td>
+                                                <td><?php echo shamsi($value->time); ?></td>
                                                 <td><a href="<?php echo AddressMyWebsite . 'postEdit/postsEdit/'. $value->id; ?>"
                                                        class="badge badge-info text-white">ویرایش</a> | <a
                                                         href="<?php echo AddressMyWebsite . 'postDelete/deletePost/' . $value->id; ?>"

@@ -19,7 +19,7 @@
                             <div class="card card-dark ">
 
                                 <div class="card-header">
-                                    <h3 class="card-title">پست جدید</h3>
+                                    <h3 class="card-title">ویرایش اخبار</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <form method="post" enctype="multipart/form-data" style="margin-top: 10px;">
@@ -37,7 +37,7 @@
 
                                                     <div class="form-group">
                         <textarea class="form-control  ckeditor"  name="content">
-<?php echo $aparatchi['listNewsByid']->content;?>"
+<?php echo $aparatchi['listNewsByid']->content;?>
                         </textarea>
                                                     </div>
                                                     <div class="form-group">
@@ -53,7 +53,7 @@
                                                         </div>
                                                 </form>
                                                 <button type="submit" name="btnEditNews"
-                                                        class="btn btn-primary btn-block mb-4">ویرایش پست
+                                                        class="btn btn-primary btn-block mb-4">ویرایش خبر
                                                 </button>
                                             </div>
                                         </div>

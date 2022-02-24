@@ -10,11 +10,11 @@ class update extends controller
         $membermodel = $this->loadModel('memberModel');
         if (isset($_POST['btnupdatemember'])) {
 
-            $infoupdateregister = trim_url(security($_POST['infoupdateregister']));
-            $emailupdateregister = trim_url(security($_POST['emailupdateregister']));
-            $usernameupdateregister = trim_url(security($_POST['usernameupdateregister']));
+//            $infoupdateregister = trim_url(security($_POST['infoupdateregister']));
+//            $emailupdateregister = trim_url(security($_POST['emailupdateregister']));
+//            $usernameupdateregister = trim_url(security($_POST['usernameupdateregister']));
             $banmember = trim_url(security($_POST['banmember']));
-            if ($membermodel->updatemember($infoupdateregister, $usernameupdateregister, $emailupdateregister, $banmember,$id)) {
+            if ($membermodel->updatemember($banmember,$id)) {
                 header('location:' . AddressMyWebsite . 'adminlistmember');
             }
         }

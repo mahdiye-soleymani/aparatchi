@@ -9,6 +9,7 @@ class memberModel extends database
         $result->bindValue(1, $username);
         $result->bindValue(2, $email);
         $result->bindValue(3, $password);
+
         if ($result->execute()) {
             return true;
         } else {
@@ -104,13 +105,12 @@ class memberModel extends database
     }
 
 
-    public function updatemember($username, $email, $banmember, $id)
+    public function updatemember($banmember, $id)
     {
-        $result = $this->connect->prepare('UPDATE `tbl_users` SET `username`=?,`email`=?,`status`=? WHERE `id`=?');
-        $result->bindValue(1, $username);
-        $result->bindValue(2, $email);
-        $result->bindValue(3, $banmember);
-        $result->bindValue(4, $id);
+        $result = $this->connect->prepare('UPDATE `tbl_users` SET `status`=? WHERE `id`=?');
+
+        $result->bindValue(1, $banmember);
+        $result->bindValue(2, $id);
         if ($result->execute()) {
             return true;
         } else {

@@ -2,7 +2,7 @@
 
 class acount extends controller
 {
-    public function accEdit($Email)
+    public function showAcount($Email)
     {
         //        menu
         $categorymodel = $this->loadModel('categorymodel');

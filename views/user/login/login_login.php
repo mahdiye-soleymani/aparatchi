@@ -22,8 +22,7 @@
             <div>
                 <label class="BYekan-sm">مرا بخاطر بسپار</label>
                 <input class="checkbox" type="checkbox" name="rememberloginsite" <?php if(isset($_COOKIE['PasswordCookie'])) echo 'checked';?> >
-                <a class="BYekan-sm" href="<?php echo AddressMyWebsite . 'forgetpassword'; ?>">رمز عبور را فراموش کرده ام</a>
-            </div>
+           </div>
             </br>
             <div class="btn_register">
                 <input class="BYekan-sm" type="submit" name="btnloginsite" value="ورود به وبسایت">

@@ -13,7 +13,7 @@
         <div id="header_row_top_right" class="BYekan-sm">
             <div id="header_row_top">
                 <?php if (isset($_SESSION['emailmember'])) { ?>
-                    <a href="<?php echo AddressMyWebsite . 'acount/accEdit/' . $_SESSION['emailmember'] ?>"
+                    <a href="<?php echo AddressMyWebsite . 'acount/showAcount/' . $_SESSION['emailmember'] ?>"
                        style="color:#fc910a;font-size: 15px;margin-right: 10px;border:solid 2px;padding: 3px ">پنل
                         کاربری</a>
                     <a href="<?php echo AddressMyWebsite . 'exitsite' ?>"
